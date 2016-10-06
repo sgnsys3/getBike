@@ -1,0 +1,33 @@
+p {
+  font-family: sans-serif;
+  font-size: 60px;
+}
+.fadeIn {
+  right:0%;
+  position: absolute;
+  background-color: red;
+  -webkit-animation-name : myKeyFrame;
+  -webkit-animation-duration : 6s;
+  -webkit-animation-iteration-count : infinite;
+}
+
+@-webkit-keyframes myKeyFrame {
+  0% { background-color: : red; color : indigo; right:0%;}
+  10% { background-color: orange; color : blue; right:20%;}
+  20% { background-color: yellow; color : green; right:40%;}
+  30% { background-color: green; color : yellow; right:60%;}
+  40% { background-color: blue; color : orange; right:80%;}
+  50% { background-color: indigo; color : red; right:100%;}
+  60% { background-color: blue; color : orange; right:80%;}
+  70% { background-color: green; color : yellow; right:60%;}
+  80% { background-color: yellow; color : green; right:40%;}
+  90% { background-color: orange; color : blue; right:20%;}
+  100% { background-color: : red; color : indigo; right:0%;}
+}
+
+li:hover {
+  background-color: red;
+  -webkit-animation-name : myKeyFrame;
+  -webkit-animation-duration : 10s;
+  -webkit-animation-iteration-count : infinite;
+}
