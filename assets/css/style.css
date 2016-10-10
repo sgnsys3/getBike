@@ -1,0 +1,17 @@
+div.menu{
+  display:block;
+}
+li.menu-item{
+  float: left;
+  display: inline-block;
+  margin: 1em;
+}
+a{
+  text-decoration: none !important;
+}
+#vdo_header{
+  display: block;
+  width: auto;
+  height: auto;
+  position: absolute;
+}
