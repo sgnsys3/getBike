@@ -1,17 +1,28 @@
-div.menu{
-  display:block;
+header{
+  width: 100%;
+  height: 100%;
+}
+#nav-primary{
+  background-color: transparent;
+}
+div.nav{
+  position:absolute;
+  background-color: transparent;
+  right: 0;
+  z-index: 999;
 }
 li.menu-item{
   float: left;
   display: inline-block;
-  margin: 1em;
+  margin: 4em 3em;
 }
 a{
   text-decoration: none !important;
+  color: white;
 }
-#vdo_header{
+.vdobg{
   display: block;
-  width: auto;
-  height: auto;
-  position: absolute;
+}
+.intro-content{
+  display: inline;
 }
