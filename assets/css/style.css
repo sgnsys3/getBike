@@ -1,22 +1,24 @@
+body{
+  width: 100%;
+}
 header{
   width: 100%;
   height: 100%;
 }
-#nav-primary{
-  background-color: transparent;
-}
-div.nav{
+#nav_primary{
   position:absolute;
   background-color: transparent;
-  right: 0;
   z-index: 999;
+  width: 100%;
+  margin-top:4em;
 }
-li.menu-item{
-  float: left;
+.menu-item{
+  margin-right: 0.5em;
+  margin-left: 2em;
   display: inline-block;
-  margin: 4em 3em;
 }
 a{
+  font-size: 1.0em;
   text-decoration: none !important;
   color: white;
 }
@@ -25,4 +27,8 @@ a{
 }
 .intro-content{
   display: inline;
+}
+.vdo-responsive{
+  width: 100%;
+  height: 100%;
 }
