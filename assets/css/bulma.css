@@ -976,12 +976,7 @@ a.box:active {
   border-color: transparent;
   color: white;
 }
-.button.is-special {
-  padding:1.5em 1em 1.5em 1em;
-  background-color: #00b0ff;
-  border-width: 0;
-  color: white;
-}
+
 .button.is-success.is-inverted {
   background-color: white;
   color: #23d160;
@@ -6766,3 +6761,6 @@ a.panel-block:hover {
   border-bottom-color: #00d1b2;
 }
 /*# sourceMappingURL=bulma.css.map */
+
+.button.is-special {   padding:1.5em 1em 1.5em 1em;   background-color: #00b0ff;   border-width: 0;   color: white; }
+.button.is-special:hover {   padding:1.5em 1em 1.5em 1em;   background-color: #0091ea;   border-width: 0;   color: white; }
