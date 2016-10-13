@@ -2,40 +2,55 @@
 <html>
 <head>
     <title>GetBike - BMD to BKT KMUTT</title>
-    <script type="text/javascript" src="assets/libs/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="assets/libs/bootstrap/dist/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/bulma/css/bulma.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
-      <header>
-        <nav id="nav_primary">
+  <header>
+    <div id="nav_primary">
+      <div class="columns">
+        <div class="column is-half"></div>
+        <div class="column special-for-nav"><a href="">HOME</a></div>
+        <div class="column special-for-nav"><a href="">DETAIL</a></div>
+        <div class="column special-for-nav"><a href="">LOCATION</a></div>
+        <div class="column special-for-nav"><a href="">CONTACT</a></div>
+        <div class="column"><a href="" class="button is-success">REGISTER</a></div>
+      </div>
+    </div>
+  </header>
+        <section id="intro">
+          <div class="vdo">
+            <div class="intro-content">
+              <h1><b>GET YOUR BIKE,</b></h1>
+              <h1><b>RIDE WITH US</b></h1>
+              <h3 style="font-size:1em;font-weight: 100; "><i><-BMD-BKT-></i></h3>
+            </div>
+                <div id="particles-js"></div>
+                <video autoplay loop preload="auto" class="vdo-responsive">
+                  <source src="assets/media/vdobg.mp4" type="video/mp4">
+                </video>
+                <div class="blackbox"></div>
+          </div>
+        </section>
+        <section id="activitie-detail">
           <div class="container-fluid">
             <div class="row">
-              <div class="col-md-6 col-md-offset-6 col-sm-6 col-sm-offset-6">
-                    <ul class="text-right">
-                      <li class="menu-item"><a href="https://google.co.th">HOME</a></li>
-                      <li class="menu-item"><a href="#">REGISTER</a></li>
-                      <li class="menu-item"><a href="#">LOCATION</a></li>
-                      <li class="menu-item"><a href="#">CONTACT</a></li>
-                    </ul>
+              <div class="col-md-12">
+                <div class="detail-content">
+                  <h1 class="text-center">GET BIKE</h1>
+                  <p>Getbike จัดตั้งมาเพื่อมีวัตถุประสงค์.....................</p>
+                </div>
               </div>
             </div>
           </div>
-        </nav>
-      </header>
-        <section id="intro">
-                <div class="vdobg">
-                    <video autoplay loop preload="auto" class="vdo-responsive">
-                      <source src="assets/media/vdobg.mp4" type="video/mp4">
-                    </video>
-                </div>
         </section>
-        <section id="activitie-detail"></section>
         <section id="date"></section>
         <section id="place"></section>
         <section id="contact" style></section>
 
-</body>
+        <script src="assets/libs/particles.js/particles.js"></script>
+        <script src="assets/libs/particles.js/demo/js/app.js"></script>
 
+</body>
 </html>
