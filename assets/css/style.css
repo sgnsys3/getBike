@@ -6,7 +6,7 @@
   background-color: transparent;
 }
 .special-for-nav{
-  margin-top: 0.5em;
+  margin-top: 0.75em;
 }
 
 a{
@@ -53,4 +53,7 @@ a{
   z-index: 10;
   position: absolute;
   color: white;
+}
+.text-detail{
+  font-size: 2em;
 }
