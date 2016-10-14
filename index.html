@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="assets/css/bulma.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Kanit:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -22,38 +23,95 @@
     </div>
   </header>
   <section id="intro">
-          <div class="vdo">
-            <div class="intro-content">
-              <h1><b>GET YOUR BIKE,</b></h1>
-              <h1><b>RIDE WITH US</b></h1>
-              <h3 class="subtitle" style="color:white; font-size:0.7em;"><i><-BMD-BKT-></i></h3>
-            </div>
-                <div id="particles-js"></div>
-                <video autoplay loop preload="auto" class="vdo-responsive">
-                  <source src="assets/media/video/intro-background.mp4" type="video/mp4">
-                </video>
-                <div class="blackbox"></div>
-          </div>
-        </section>
+    <div class="container is-fluid" style="margin:0">
+      <div style="position: relative; top: 0; left:0; right:0; bottom:0; width: 100%; height: 100%; z-index: -1; margin:0">
+        <video autoplay loop preload="auto" style="">
+          <source src="assets/media/video/intro-background.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div id="particles-js"></div>
+      <div class="blackbox"></div>
+    </div>
+  </section>
+        <!-- <div class="intro-content">
+          <h1><b>GET YOUR BIKE,</b></h1>
+          <h1><b>RIDE WITH US</b></h1>
+          <h3 class="subtitle" style="color:white; font-size:0.7em;"><i><-BMD-BKT-></i></h3>
+        </div>
+
   <section id="detail">
+    <!-- <div class="columns">
+      <div class="column is-half">
+        <div class="column has-text-centered">
+          <h1 class="text-detail">GET BIKE</h1>
+        </div>
+        <div class="column">
+          <p class="text-detail">เราคือโครงการจักรยานประเพณี มจธ. บางมด - บางขุนเทียน กิจกรรมปั่นจักรยานทางไกลข้ามวิทยาเขตจากมจธ.บางมด ไปยังมจธ. บางขุนเทียน ระยะทางรวม 44 กิโลเมตร โดยนักศึกษา บุคลากร และบุคคลภายนอกสามารถเข้าร่วมได้ฟรี ไม่มีค่าใช้จ่าย</h1>
+        </div>
+      </div> -->
+
     <div class="container is-fluid">
       <div class="columns">
-        <div class="column has-text-centered">
-          <p class="text-detail">GET BIKE</h1>
+        <div class="column">
+          <p class="text-detail-header has-text-centered detail-margin">GET BIKE</p>
         </div>
       </div>
+
       <div class="columns">
-        <div class="column has-text-centered">
-          <p class="text-detail">จัดเพื่อ</h1>
+        <div class="column">
+          <p class="text-detail has-text-centered">เราคือโครงการจักรยานประเพณี มจธ. บางมด - บางขุนเทียน กิจกรรมปั่นจักรยานทางไกลข้ามวิทยาเขต<br>จากมจธ.บางมด ไปยังมจธ. บางขุนเทียน ระยะทางรวม 44 กิโลเมตร โดยนักศึกษา บุคลากร และบุคคลภายนอกสามารถเข้าร่วมได้ฟรี ไม่มีค่าใช้จ่าย</p>
         </div>
       </div>
     </div>
+
+
+
   </section>
 
-        <section id="date"></section>
-        <section id="place"></section>
+
+
+  <section id="detail-more" style="background-color:gray;">
+
+
+    <div class="columns">
+
+
+      <div class="column">
+        <div class="container is-fluid">
+          <p class="text-detail">สิ่งที่ต้องเตรียมมา</p>
+          <p class="text-detail">1.ตัว</p>
+          <p class="text-detail">2.หัวใจ</p>
+          <p class="text-detail">1.ตัว</p>
+          <p class="text-detail">2.หัวใจ</p>
+          <p class="text-detail">1.ตัว</p>
+          <p class="text-detail">2.หัวใจ</p>
+        </div>
+      </div>
+
+      <div class="column" style="margin:0;">
+
+      </div>
+
+      <div class="column" style="margin:0;">
+
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+
+  <section id="place"></section>
+
+
+
         <section id="contact" style></section>
         <script src="assets/js/particles.js"></script>
         <script src="assets/js/particles.run.app.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="assets/js/parallax.min.js"></script>
+
 </body>
 </html>
