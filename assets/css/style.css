@@ -1,3 +1,12 @@
+html, body {
+  width: 100%;
+  height:100%;
+  margin:0;
+  padding:0;
+}
+/*section nav*/
+
+
 .nav-normal {
   padding-top: 1.5em;
   text-align: center;
@@ -19,8 +28,6 @@
   z-index: 10;
   background-color: transparent;
 }
-
-
 a.nav-my-menu {
   background-color: transparent;
   padding-left: 1em;
@@ -30,50 +37,6 @@ a.nav-my-menu {
   text-decoration: none !important;
   color: white;
   text-align: center;
-}
-.vdo-responsive{
-  z-index: 1;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-.vdo{
-  position: relative;
-  margin: 0;
-  padding: 0;
-  top: 0;
-  bottom: 0;
-  width: 100vw;
-  height: 100%;
-}
-.blackbox{
-  padding: 0;
-  margin: 0;
-  top:0;
-  bottom: 0;
-  position: absolute;
-  z-index: 5;
-  width: inherit;
-  height: 99.3%;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-#particles-js{
-  width: inherit;
-  height: 99.3%;
-  z-index: 8;
-  position: absolute;
-}
-.intro-content{
-  font-size: 2.6em;
-  margin-top: 40vh;
-  margin-left: 16vh;
-  z-index: 10;
-  position: absolute;
-  color: white;
-}
-
-.text-detail{
-  font-size: 2em;
 }
 .hvr-underline-from-center {
   display: inline-block;
@@ -106,4 +69,63 @@ a.nav-my-menu {
 .hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
   left: 0;
   right: 0;
+}
+
+
+/* section intro*/
+
+
+#intro{
+  margin:0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+#detail{
+  margin-top: 0;
+  height: 100vh;
+}
+#detail-more{
+  margin-top: 0;
+  height: 50vh;
+}
+.detail-margin{
+  margin-top: 15%;
+}
+.blackbox{
+  margin: 0;
+  top:0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+  z-index: 5;
+  height: 99.3%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#particles-js{
+  top:0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 99.3%;
+  z-index: 8;
+  position: absolute;
+}
+.intro-content{
+  font-size: 2.6em;
+  margin-top: 40vh;
+  margin-left: 16vh;
+  z-index: 10;
+  position: absolute;
+  color: white;
+}
+.text-detail-header{
+  font-size: 3em;
+  font-family: 'Kanit', sans-serif;
+}
+.text-detail{
+  font-size: 2em;
+  font-weight: 300;
+  font-family: 'Kanit', sans-serif;
 }
