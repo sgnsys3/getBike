@@ -1,16 +1,10 @@
-.nav-normal {
-  padding-top: 1.5em;
-  text-align: center;
+
+body{
+  font-family: 'Kanit',serif;
 }
 
-.nav-register {
-  padding-top: 0.4em;
-  background-color: green;
-  color: white;
-  opacity: 1;
-  text-align: center;
-  height: 100%;
-}
+
+/*section nav*/
 
 #nav_primary{
   margin-top:8vh;
@@ -19,7 +13,6 @@
   z-index: 10;
   background-color: transparent;
 }
-
 a.nav-my-menu {
   background-color: transparent;
   padding-left: 1em;
@@ -54,7 +47,7 @@ a.nav-my-menu {
   z-index: 5;
   width: inherit;
   height: 99.3%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 #particles-js{
   width: inherit;
@@ -64,13 +57,12 @@ a.nav-my-menu {
 }
 .intro-content{
   font-size: 2.6em;
-  margin-top: 40vh;
-  margin-left: 16vh;
+  margin-top: 20%;
+  margin-left: 10%;
   z-index: 10;
   position: absolute;
   color: white;
 }
-
 .hvr-underline-from-center {
   display: inline-block;
   vertical-align: middle;
@@ -102,4 +94,80 @@ a.nav-my-menu {
 .hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
   left: 0;
   right: 0;
+}
+#detail{
+  height: 40em;
+}
+.text-detail{
+  font-family: 'Kanit',serif;
+  font-size: 1.5em;
+}
+.parallax-window{
+  min-height: 400px;
+  background: transparent;
+}
+#schedule{
+  height: 60vh;
+}
+.locationbm{
+  margin-top:2.6em;
+  margin-left: -1.6em;
+  font-weight: 300;
+  font-size:1.9em;
+  transform: rotate(-90deg);
+}
+#map{
+    height: 20em;
+}
+#map-iframe{
+    width: 26em;
+    height: 20em;
+}
+.button-bulma{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: white;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    color: #363636;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    font-size: 14px;
+    height: 32px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    line-height: 24px;
+    padding-left: 8px;
+    padding-right: 8px;
+    position: relative;
+    vertical-align: top;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    white-space: nowrap;
+}
+.button-bulma.is-special {   padding:1.5em 1em 1.5em 1em;   background-color: #00b0ff;   border-width: 0;   color: white; }
+.button-bulma.is-special:hover {   padding:1.5em 1em 1.5em 1em;   background-color: #0091ea;   border-width: 0;   color: white; }
+
+
+/* section intro*/
+#intro{
+  margin:0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
