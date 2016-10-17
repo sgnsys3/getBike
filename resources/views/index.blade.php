@@ -12,9 +12,9 @@
   <header>
     <div id="nav_primary">
       <div class="col-sm-12">
-        <div class="col-sm-1 col-sm-offset-7"><a class="hvr-underline-from-center nav-my-menu" href="">HOME</a></div>
-        <div class="col-sm-1"><a class="hvr-underline-from-center nav-my-menu" href="">DETAIL</a></div>
-        <div class="col-sm-1"><a class="hvr-underline-from-center nav-my-menu" href="">LOCATION</a></div>
+        <div class="col-sm-1 col-sm-offset-7"><a class="hvr-underline-from-center nav-my-menu" href="#intro">HOME</a></div>
+        <div class="col-sm-1"><a class="hvr-underline-from-center nav-my-menu" href="#detail">DETAIL</a></div>
+        <div class="col-sm-1"><a class="hvr-underline-from-center nav-my-menu" href="#map">LOCATION</a></div>
         <div class="col-sm-1"><a class="hvr-underline-from-center nav-my-menu" href="">CONTACT</a></div>
         <div class="col-sm-1"><a href="" class="button-bulma is-special " style="margin-top:-0.8em; text-decoration:none;">REGISTER</a></div>
       </div>
@@ -156,14 +156,14 @@
   </div>
 </div>
 </section>
-  <!-- <section id="member">
+  <section id="member">
     <div class="row">
       <div class="col-sm-3 col-sm-offset-5">
       <h3 class="">จำนวนนักปั่นที่เข้าร่วม</h3>
       <h3 style="margin-left:20%"><b>XXXX คน</b></h3>
     </div>
   </div>
-  </section> -->
+  </section>
 
 
   <!-- <section id="member-more" style="background-color:gray;">
