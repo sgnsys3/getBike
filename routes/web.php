@@ -20,3 +20,4 @@ Route::post('/', 'RegisterController@register');
 // API
 Route::post('/api/getparticipant' , ['as' => 'api.getparticipant','uses' => 'ApiController@getparticipant']);
 Route::post('/api/insertParticipant' , ['as' => 'api.insertparticipant','uses' => 'ApiController@insertparticipant']);
+Route::post('/api/checkregistercode' , ['as' => 'api.checkregistercode','uses' => 'ApiController@checkRegisterCode']);

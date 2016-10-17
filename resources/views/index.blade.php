@@ -157,42 +157,8 @@
   </div>
 </div>
 </section>
-@if(isset($successful))
-<div class="btn btn-success">OK RgisterCode : BMDBKT{{ $regisCode }}</div>
-@else
-<section>
-    <div class="form-group has-error">
-    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-    <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="ชื่อจริง" tabindex="1" required>
-    <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="นามสกุล" tabindex="2" required>
-    <div class="form-group has-error">
-      <input type="text" name="phone_number" id="phone_number" class="form-control input-lg" placeholder="เบอร์โทร (ติดกันโดยไม่มี -)" tabindex="3" required>
-    </div>
-    <input type="text" name="email" id="email" class="form-control input-lg" placeholder="E-Mail" tabindex="4" required>
-    <button onclick="insertParticipant()" value="ลงทะเบียน" class="btn btn-primary btn-block" tabindex="5">
-</section>
-  @if(isset($errors))
-    @if (count($errors) > 0)
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-    @endif
-  @endif
-@endif
-  <!-- <section id="member">
-    <div class="row">
-      <div class="col-sm-3 col-sm-offset-5">
-      <h3 class="">จำนวนนักปั่นที่เข้าร่วม</h3>
-      <h3 style="margin-left:20%"><b>XXXX คน</b></h3>
-    </div>
-  </div>
-  </section> -->
   <section id="register" style="background-image: url('{{ URL::asset('media/picture/blue-filter-bg.jpg') }}');">
-    <div class="container-fluid">
+    <div class="container-fluid ">
         <div class="row">
             <div class="register-text">
             <p class="text-center" style="font-weight:300;">จำนวนคนที่เข้าร่วม</p>
@@ -201,36 +167,100 @@
         </div>
         <div class="col-sm-4 col-sm-offset-4 text-center">
         <div class="register-btn text-center">
-            <a href="#" class="text-center">ร่วมเป็นส่วนหนึ่งกับพวกเรา</a>
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#registerModal">
+              ร่วมเป็นส่วนหนึ่งกับพวกเรา
+            </button>
         </div>
         </div>
     </div>
   </section>
+
+  <!-- Modal -->
+
+  <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">ลงทะเบียน</h4>
+        </div>
+        <form id="registerForm" action="">
+        <div class="modal-body">
+            <div class="form-group">
+              <label for="first_name">ชื่อจริง</label>
+              <input type="text" class="form-control" id="first_name" placeholder="First Name" tabindex="1">
+            </div>
+            <div class="form-group">
+              <label for="first_name">นามสกุล</label>
+              <input type="text" class="form-control" id="last_name" placeholder="Last Name" tabindex="2">
+            </div>
+            <div id="phone_number-control" class="form-group">
+              <label for="first_name">เบอร์โทรศัพท์ โดยไม่มี -</label>
+              <input type="text" class="form-control" id="phone_number" placeholder="Phone Number without '-' Ex. 0998889988" tabindex="3">
+              <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+            </div>
+            <div id="email-control" class="form-group">
+              <label for="first_name">อีเมลล์</label>
+              <input type="text" class="form-control" id="email" placeholder="E-Mail" tabindex="4">
+              <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">ปิด</button>
+          <button type="submit" onclick="insertParticipant()" class="btn btn-primary">ลงทะเบียน</button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="registerCodeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">รหัสลงทะเบียน</h4>
+        </div>
+        <div class="modal-body">
+          <h3 style="color : red; text-align: center">กรุณาจดรหัสลงทะเบียนเพื่อใช้ในการลงทะเบียนที่หน้างาน</h2>
+          <h2 style="color : red; text-align: center" id="myRegisterCode"></h2>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">ปิด</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="{{ URL::asset('js/script.js') }}"></script>
   <script src="{{ URL::asset('js/particles.js') }}"></script>
   <script src="{{ URL::asset('js/particles.run.app.js') }}"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="{{ URL::asset('js/parallax.min.js') }}"></script>
+  <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
   <script type="text/javascript">
     var apiUpdateParticipant = "{{ route('api.getparticipant') }}";
     var apiInsertParticipant = "{{ route('api.insertparticipant') }}";
     window.onload = function() { updateParticipant(); }
     var timer = setInterval(updateParticipant,2000);
     $(function() {
-  $('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
+      $('a[href*="#"]:not([href="#"])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
       }
-    }
-  });
-});
+      });
+    });
+    $("#registerForm").submit(function (e) {
+        e.preventDefault();
+        insertParticipant();
+    });
   </script>
 </body>
 </html>
