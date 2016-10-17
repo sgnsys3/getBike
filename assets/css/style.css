@@ -1,3 +1,6 @@
+body{
+  font-family: 'Kanit',serif;
+}
 .nav-normal {
   padding-top: 1.5em;
   text-align: center;
@@ -54,7 +57,7 @@ a.nav-my-menu {
   z-index: 5;
   width: inherit;
   height: 99.3%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 #particles-js{
   width: inherit;
@@ -64,7 +67,7 @@ a.nav-my-menu {
 }
 .intro-content{
   font-size: 2.6em;
-  margin-top: 25%;
+  margin-top: 20%;
   margin-left: 10%;
   z-index: 10;
   position: absolute;
@@ -104,12 +107,25 @@ a.nav-my-menu {
   right: 0;
 }
 #detail{
-  width: 100%;
-  height: 100%;
+  height: 40em;
 }
-#detail .text{
+.text-detail{
   font-family: 'Kanit',serif;
-  margin-top:15%;
-  margin-bottom: 15%;
-  font-size: 2.1em;
+  font-size: 1.5em;
+}
+#member{
+
+}
+.parallax-window{
+  min-height: 400px;
+  background: transparent;
+}
+#schedule{
+  height: 100vh;
+}
+.locationbm{
+  margin-top:3.4em;
+  font-weight: 300;
+  font-size:1.9em;
+  transform: rotate(-90deg);
 }
