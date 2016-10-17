@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('index');
 });
+
+Route::post('/', 'RegisterController@register');
+
+// API
+Route::get('/api/getparticipant' , 'ApiController@getparticipant');
