@@ -6,15 +6,17 @@
     <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/style.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Kanit:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
-
+    <script type="text/javascript">
+        
+    </script>
 </head>
 <body>
   <header>
     <div id="nav_primary">
       <div class="col-sm-12">
-        <div class="col-sm-1 col-sm-offset-7"><a class="hvr-underline-from-center nav-my-menu" href="">HOME</a></div>
-        <div class="col-sm-1"><a class="hvr-underline-from-center nav-my-menu" href="">DETAIL</a></div>
-        <div class="col-sm-1"><a class="hvr-underline-from-center nav-my-menu" href="">LOCATION</a></div>
+        <div class="col-sm-1 col-sm-offset-7"><a class="hvr-underline-from-center nav-my-menu" href="#intro">HOME</a></div>
+        <div class="col-sm-1"><a class="hvr-underline-from-center nav-my-menu" href="#detail">DETAIL</a></div>
+        <div class="col-sm-1"><a class="hvr-underline-from-center nav-my-menu" href="#map">LOCATION</a></div>
         <div class="col-sm-1"><a class="hvr-underline-from-center nav-my-menu" href="">CONTACT</a></div>
         <div class="col-sm-1"><a href="" class="button-bulma is-special " style="margin-top:-0.8em; text-decoration:none;">REGISTER</a></div>
       </div>
@@ -189,18 +191,21 @@
     </div>
   </div>
   </section> -->
-
-
-  <!-- <section id="member-more" style="background-color:gray;">
-    <div class="container is-fluid" style="margin-top:0em">
-      <div class="columns">
-        <div class="column">
-          <h2 class="has-text-centered">มาเป็นส่วนหนึ่งของเราไหม</h2>
-          <p></p>
+  <section id="register" style="background-image: url('{{ URL::asset('media/picture/blue-filter-bg.jpg') }}');">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="register-text">
+            <p class="text-center" style="font-weight:300;">จำนวนคนที่เข้าร่วม</p>
+            <p class="text-center" style="font-size:2em">XXX คน</p>
+            </div>
         </div>
-      </div>
+        <div class="col-sm-4 col-sm-offset-4 text-center">
+        <div class="register-btn text-center">
+            <a href="#" class="text-center">ร่วมเป็นส่วนหนึ่งกับพวกเรา</a>
+        </div>
+        </div>
     </div>
-  </section> -->
+  </section>
 
   <script src="{{ URL::asset('js/script.js') }}"></script>
   <script src="{{ URL::asset('js/particles.js') }}"></script>
