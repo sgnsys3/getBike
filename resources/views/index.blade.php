@@ -64,13 +64,36 @@
     <div class="col-sm-6" style="height:350px  margin:0; padding:0;">
       <div class="parallax-window" data-parallax="scroll" data-image-src="{{ URL::asset('media/picture/tu1.jpg') }}"></div>
     </div>
-    <div class="col-sm-6" style="background-color:#616161; height:400px">
+    <div class="col-sm-6" style="background-image: url('{{ URL::asset('media/picture/blue-filter-bg.jpg') }}'); height:400px;">
         <div class="detail-more-text">
-      <h2 class="text-center">สิ่งที่ต้องเตรียมมา</h2>
-      <p class="text-left">* จักรยาน</p>
-      <p class="text-left">* หมวกกันกระแทกสำหรับจักรยาน</p>
-      <p class="text-left">* บัตรประจำตัวประชาชน <br>หรือบัตรอื่นๆ ที่ราชการออกให้เพื่อใช้ในการลงทะเบียนในวันงาน</p>
-    </div>
+      <h2 class="text-center" style="padding-bottom:10px; border-bottom:2px solid white">สิ่งที่ต้องเตรียมมา</h2>
+      <div class="row" style="margin-left:4em; margin-top:2em;">
+      <div class="col-sm-12">
+          <div class="col-sm-4 pic-detail" style="margin-right:5em;">
+              <img src="{{URL::asset('media/picture/transport.svg')}}" alt="" class="" style="pic-detail ">
+          </div>
+          <div class="col-sm-4 pic-detail" style="margin-right:5em;">
+              <img src="{{URL::asset('media/picture/fashion.svg')}}" alt="" class="" style="pic-detail">
+          </div>
+          <div class="col-sm-4 pic-detail">
+              <img src="{{URL::asset('media/picture/id-card.svg')}}" alt="" class="" style="pic-detail">
+          </div>
+      </div>
+      </div>
+      <div class="row" style="margin-left:4em; margin-top:2em;">
+      <div class="col-sm-12">
+          <div class="col-sm-4">
+              <p>จักรยาน</p>
+          </div>
+          <div class="col-sm-4">
+              <p>หมวกนิรภัย</p>
+          </div>
+          <div class="col-sm-4">
+              <p>บัตรประชาชน</p>
+          </div>
+      </div>
+      </div>
+      </div>
     </div>
   </div>
 </section>
@@ -79,9 +102,9 @@
     <div class="col-sm-6" style="height:350px  margin:0; padding:0;">
       <div class="parallax-window" data-parallax="scroll" data-image-src="{{ URL::asset('media/picture/tu2.jpg') }}"></div>
     </div>
-    <div class="col-sm-6" style="background-color:#616161; height:400px">
+    <div class="col-sm-6" style="background-image: url('{{ URL::asset('media/picture/blue-filter-bg.jpg') }}'); height:400px">
     <div class="detail-more-text">
-      <h2 class="text-center">คุณสมบัติในการเข้าร่วม</h2>
+      <h2 class="text-center" style="padding-bottom:10px; border-bottom:2px solid white">คุณสมบัติในการเข้าร่วม</h2>
       <p class="text-left">* มีอายุ 15 ปีขึ้นไป</p>
       <p class="text-left">* ต้องสวมหมวกกันกระแทกสำหรับจักรยาน และรัดสายรัดให้เรียบร้อยในระหว่างการเข้าร่วมกิจกรรม</p>
       <p class="text-left">* มีทักษะในการปั่นจักรยานทางแคบได้ และปั่นในเส้นทางที่ผู้จัดกิจกรรมจัดให้เท่านั้น</p>
@@ -92,7 +115,7 @@
     </div>
   </div>
 </section>
-<section id="schedule">
+<section id="schedule" style="background-color:#fff">
   <div class="container-fluid" style="margin-left:5vh; margin-right:5vh;">
     <div class="row">
       <div class="col-sm-3 col-sm-offset-5">
@@ -187,8 +210,9 @@
               <div class="col-sm-4 col-sm-offset-3">
                   <h3>CONTACT</h3>
 
-                  <p> <img src="{{ URL::asset('media/picture/fb.svg') }}" class="contact-img" alt="Responsive image" style=""> Phachara Kamthong</p>
-                  <p><img src="{{ URL::asset('media/picture/twitter.svg') }}" class="contact-img" alt="Responsive image" style=""> @pcr.mix</p>
+                  <p> <img src="{{ URL::asset('media/picture/fb.svg') }}" class="contact-img" alt="Responsive image" style=""> KMUTT GET BIKE</p>
+                  <p><img src="{{ URL::asset('media/picture/twitter.svg') }}" class="contact-img" alt="Responsive image" style=""> @getbikekmutt</p>
+                  <p><img src="{{ URL::asset('media/picture/phone.svg') }}" class="contact-img" alt="Responsive image" style=""> 024706969</p>
              </div>
           </div>
       </div>
