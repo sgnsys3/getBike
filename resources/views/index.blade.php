@@ -156,6 +156,31 @@
   </div>
 </div>
 </section>
+@if(isset($successful))
+<div class="btn btn-success">OK RgisterCode : BMDBKT{{ $regisCode }}</div>
+@else
+<section>
+  <form class="register" action="" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+    <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="ชื่อจริง" tabindex="1" required>
+    <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="นามสกุล" tabindex="2" required>
+    <input type="text" name="phone_number" id="tel_phone" class="form-control input-lg" placeholder="เบอร์โทร (ติดกันโดยไม่มี -)" tabindex="3" required>
+    <input type="text" name="email" id="email" class="form-control input-lg" placeholder="E-Mail" tabindex="4" required>
+    <input type="submit" value="ลงทะเบียน" class="btn btn-primary btn-block" tabindex="5">
+  </form>
+</section>
+  @if(isset($errors))
+    @if (count($errors) > 0)
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
+  @endif
+@endif
   <!-- <section id="member">
     <div class="row">
       <div class="col-sm-3 col-sm-offset-5">
