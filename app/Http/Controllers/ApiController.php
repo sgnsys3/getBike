@@ -13,7 +13,7 @@ class ApiController extends Controller {
     $this->validate($request,[
       'first_name' => 'required|max:255',
       'last_name' => 'required|max:255',
-      'phone_number' => 'required|alpha_num|min:9|max:10' ,
+      'phone_number' => 'required|numeric|digits_between:9,10' ,
       'email' => 'required|email'
     ]);
     $info = registerInformation::create([
@@ -24,5 +24,9 @@ class ApiController extends Controller {
     ]);
     $info->save();
     return $info->id;
+  }
+
+  public function checkRegisterCode(Request $request) {
+    return "not use";
   }
 }
