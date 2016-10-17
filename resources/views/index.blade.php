@@ -3,12 +3,11 @@
 <head>
     <title>GetBike - BMD to BKT KMUTT</title>
     <meta charset="utf-8">
+    <meta name="_token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/style.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Kanit:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
-    <script type="text/javascript">
-        
-    </script>
+    <script src="{{ URL::asset('js/getbike.js') }}"></script>
 </head>
 <body>
   <header>
@@ -162,14 +161,15 @@
 <div class="btn btn-success">OK RgisterCode : BMDBKT{{ $regisCode }}</div>
 @else
 <section>
-  <form class="register" action="" method="post" enctype="multipart/form-data">
+    <div class="form-group has-error">
     <input type="hidden" name="_token" value="{{ csrf_token() }}">
     <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="ชื่อจริง" tabindex="1" required>
     <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="นามสกุล" tabindex="2" required>
-    <input type="text" name="phone_number" id="tel_phone" class="form-control input-lg" placeholder="เบอร์โทร (ติดกันโดยไม่มี -)" tabindex="3" required>
+    <div class="form-group has-error">
+      <input type="text" name="phone_number" id="phone_number" class="form-control input-lg" placeholder="เบอร์โทร (ติดกันโดยไม่มี -)" tabindex="3" required>
+    </div>
     <input type="text" name="email" id="email" class="form-control input-lg" placeholder="E-Mail" tabindex="4" required>
-    <input type="submit" value="ลงทะเบียน" class="btn btn-primary btn-block" tabindex="5">
-  </form>
+    <button onclick="insertParticipant()" value="ลงทะเบียน" class="btn btn-primary btn-block" tabindex="5">
 </section>
   @if(isset($errors))
     @if (count($errors) > 0)
@@ -196,7 +196,7 @@
         <div class="row">
             <div class="register-text">
             <p class="text-center" style="font-weight:300;">จำนวนคนที่เข้าร่วม</p>
-            <p class="text-center" style="font-size:2em">XXX คน</p>
+            <p id="currentParticipant" class="text-center" style="font-size:2em">XXX คน</p>
             </div>
         </div>
         <div class="col-sm-4 col-sm-offset-4 text-center">
@@ -212,6 +212,25 @@
   <script src="{{ URL::asset('js/particles.run.app.js') }}"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="{{ URL::asset('js/parallax.min.js') }}"></script>
-
+  <script type="text/javascript">
+    var apiUpdateParticipant = "{{ route('api.getparticipant') }}";
+    var apiInsertParticipant = "{{ route('api.insertparticipant') }}";
+    window.onload = function() { updateParticipant(); }
+    var timer = setInterval(updateParticipant,2000);
+    $(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+  </script>
 </body>
 </html>
