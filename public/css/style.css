@@ -106,11 +106,17 @@ a.nav-my-menu {
   min-height: 400px;
   background: transparent;
 }
+.pic-detail{
+    width:5em;
+    border-radius: 50%;
+    border:2px solid white;
+    padding: 15px;
+}
 #schedule{
   height: 60vh;
 }
 .locationbm{
-  margin-top:2.2em;
+  margin-top:2.5em;
   margin-left: -2em;
   font-weight: 400;
   font-size:2em;
@@ -174,6 +180,8 @@ a.nav-my-menu {
 }
 .detail-more-text{
     font-size:1.3em;
+    font-weight: 300;
+    color: white;
 }
 #register{
     height: 100vh;
