@@ -3,10 +3,10 @@
 <head>
     <title>GetBike - BMD to BKT KMUTT</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/style.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Kanit:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
-    
+
 </head>
 <body>
   <header>
@@ -31,7 +31,7 @@
             </div>
                 <div id="particles-js"></div>
                 <video autoplay loop preload="auto" class="vdo-responsive">
-                  <source src="assets/media/video/intro-background.mp4" type="video/mp4">
+                  <source src="{{ URL::asset('media/video/intro-background.mp4') }}" type="video/mp4">
                 </video>
                 <div class="blackbox"></div>
           </div>
@@ -64,14 +64,14 @@
       <p>* บัตรประจำตัวประชาชน <br>หรือบัตรอื่นๆ ที่ราชการออกให้เพื่อใช้ในการลงทะเบียนในวันงาน</p>
     </div>
     <div class="col-sm-6" style="height:350px  margin:0; padding:0;">
-      <div class="parallax-window" data-parallax="scroll" data-image-src="assets/media/picture/biker.jpg"></div>
+      <div class="parallax-window" data-parallax="scroll" data-image-src="{{ URL::asset('media/picture/biker.jpg') }}"></div>
     </div>
   </div>
 </section>
 <section id="detail-more-2">
   <div class="container-fluid" style=" margin:0; padding:0;">
     <div class="col-sm-6" style="height:350px  margin:0; padding:0;">
-      <div class="parallax-window" data-parallax="scroll" data-image-src="assets/media/picture/biker.jpg"></div>
+      <div class="parallax-window" data-parallax="scroll" data-image-src="{{ URL::asset('media/picture/biker.jpg') }}"></div>
     </div>
     <div class="col-sm-6">
       <h2>คุณสมบัติในการเข้าร่วม</h2>
@@ -177,11 +177,11 @@
     </div>
   </section> -->
 
-  <script src="assets/js/script.js"></script>
-  <script src="assets/js/particles.js"></script>
-  <script src="assets/js/particles.run.app.js"></script>
+  <script src="{{ URL::asset('js/script.js') }}"></script>
+  <script src="{{ URL::asset('js/particles.js') }}"></script>
+  <script src="{{ URL::asset('js/particles.run.app.js') }}"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script src="assets/js/parallax.min.js"></script>
+  <script src="{{ URL::asset('js/parallax.min.js') }}"></script>
 
 </body>
 </html>
