@@ -170,12 +170,54 @@
             <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#registerModal">
               ร่วมเป็นส่วนหนึ่งกับพวกเรา
             </button>
+            <br>
+            <br>
+            <button type="button" class="btn btn-danger btn-md" data-toggle="modal" data-target="#forgetRegisterCodeModal">
+              ลืมรหัสลงทะเบียน
+            </button>
         </div>
         </div>
     </div>
   </section>
 
   <!-- Modal -->
+
+  <div class="modal fade" id="forgetRegisterCodeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel" style="color:red">ลืมรหัสลงทะเบียน</h4>
+        </div>
+        <form id="checkRegisterCodeForm" action="">
+        <div class="modal-body">
+            <div id="first_name-control_check" class="form-group">
+              <label for="first_name_check">ชื่อจริง</label>
+              <input type="text" class="form-control" id="first_name_check" placeholder="First Name" tabindex="1">
+            </div>
+            <div id="last_name-control_check" class="form-group">
+              <label for="last_name_check">นามสกุล</label>
+              <input type="text" class="form-control" id="last_name_check" placeholder="Last Name" tabindex="2">
+            </div>
+            <div id="phone_number-control_check" class="form-group">
+              <label for="phone_number_check">เบอร์โทรศัพท์ โดยไม่มี -</label>
+              <input type="text" class="form-control" id="phone_number_check" placeholder="Phone Number without '-' Ex. 0998889988" tabindex="3">
+              <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+            </div>
+            <div id="email-control_check" class="form-group">
+              <label for="email_check">อีเมลล์</label>
+              <input type="text" class="form-control" id="email_check" placeholder="E-Mail" tabindex="4">
+              <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">ปิด</button>
+          <button type="submit" class="btn btn-warning">ค้นหาข้อมูล</button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
@@ -186,28 +228,28 @@
         </div>
         <form id="registerForm" action="">
         <div class="modal-body">
-            <div class="form-group">
+            <div id="first_name-control" class="form-group">
               <label for="first_name">ชื่อจริง</label>
               <input type="text" class="form-control" id="first_name" placeholder="First Name" tabindex="1">
             </div>
-            <div class="form-group">
-              <label for="first_name">นามสกุล</label>
+            <div id="last_name-control"class="form-group">
+              <label for="last_name">นามสกุล</label>
               <input type="text" class="form-control" id="last_name" placeholder="Last Name" tabindex="2">
             </div>
             <div id="phone_number-control" class="form-group">
-              <label for="first_name">เบอร์โทรศัพท์ โดยไม่มี -</label>
+              <label for="phone_number">เบอร์โทรศัพท์ โดยไม่มี -</label>
               <input type="text" class="form-control" id="phone_number" placeholder="Phone Number without '-' Ex. 0998889988" tabindex="3">
               <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
             </div>
             <div id="email-control" class="form-group">
-              <label for="first_name">อีเมลล์</label>
+              <label for="email">อีเมลล์</label>
               <input type="text" class="form-control" id="email" placeholder="E-Mail" tabindex="4">
               <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
             </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">ปิด</button>
-          <button type="submit" onclick="insertParticipant()" class="btn btn-primary">ลงทะเบียน</button>
+          <button type="submit" class="btn btn-primary">ลงทะเบียน</button>
         </div>
         </form>
       </div>
@@ -222,7 +264,7 @@
           <h4 class="modal-title" id="myModalLabel">รหัสลงทะเบียน</h4>
         </div>
         <div class="modal-body">
-          <h3 style="color : red; text-align: center">กรุณาจดรหัสลงทะเบียนเพื่อใช้ในการลงทะเบียนที่หน้างาน</h2>
+          <h3 style="color : red; text-align: center" id="registerCodeHeader">กรุณาจดรหัสลงทะเบียนเพื่อใช้ในการลงทะเบียนที่หน้างาน</h3>
           <h2 style="color : red; text-align: center" id="myRegisterCode"></h2>
         </div>
         <div class="modal-footer">
@@ -241,6 +283,7 @@
   <script type="text/javascript">
     var apiUpdateParticipant = "{{ route('api.getparticipant') }}";
     var apiInsertParticipant = "{{ route('api.insertparticipant') }}";
+    var apiCheckRegisterCode = "{{ route('api.checkregistercode') }}";
     window.onload = function() { updateParticipant(); }
     var timer = setInterval(updateParticipant,2000);
     $(function() {
@@ -260,6 +303,10 @@
     $("#registerForm").submit(function (e) {
         e.preventDefault();
         insertParticipant();
+    });
+    $("#checkRegisterCodeForm").submit(function (e) {
+        e.preventDefault();
+        checkRegisterCode();
     });
   </script>
 </body>
