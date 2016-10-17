@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/style.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Kanit:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
-
+    <script type="text/javascript">
+        
+    </script>
 </head>
 <body>
   <header>
@@ -156,26 +158,29 @@
   </div>
 </div>
 </section>
-  <section id="member">
+  <!-- <section id="member">
     <div class="row">
       <div class="col-sm-3 col-sm-offset-5">
       <h3 class="">จำนวนนักปั่นที่เข้าร่วม</h3>
       <h3 style="margin-left:20%"><b>XXXX คน</b></h3>
     </div>
   </div>
-  </section>
-
-
-  <!-- <section id="member-more" style="background-color:gray;">
-    <div class="container is-fluid" style="margin-top:0em">
-      <div class="columns">
-        <div class="column">
-          <h2 class="has-text-centered">มาเป็นส่วนหนึ่งของเราไหม</h2>
-          <p></p>
-        </div>
-      </div>
-    </div>
   </section> -->
+  <section id="register" style="background-image: url('{{ URL::asset('media/picture/blue-filter-bg.jpg') }}');">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="register-text">
+            <p class="text-center" style="font-weight:300;">จำนวนคนที่เข้าร่วม</p>
+            <p class="text-center" style="font-size:2em">XXX คน</p>
+            </div>
+        </div>
+        <div class="col-sm-4 col-sm-offset-4 text-center">
+        <div class="register-btn text-center">
+            <a href="#" class="text-center">ร่วมเป็นส่วนหนึ่งกับพวกเรา</a>
+        </div>
+        </div>
+    </div>
+  </section>
 
   <script src="{{ URL::asset('js/script.js') }}"></script>
   <script src="{{ URL::asset('js/particles.js') }}"></script>

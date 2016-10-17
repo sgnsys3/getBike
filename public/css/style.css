@@ -173,5 +173,32 @@ a.nav-my-menu {
 }
 #register{
     height: 100vh;
-    background-image: url('{{ URL::asset('media/picture/biker.jpg') }}');
+    color: white;
+}
+.register-text{
+    margin-top: 30vh;
+    font-size: 1.7em;
+    margin-bottom: 5vh;
+}
+.register-btn a{
+    color: white;
+    font-size:1.5em;
+    text-decoration: none;
+    text-align: center;
+}
+.register-btn{
+    color: white;
+    display: inline-block;
+    border: 1px solid white;
+    padding: 15px;
+    margin-top: 5%;
+
+    text-align: center;
+}
+.register-btn:hover{
+    background-color: white;
+    color:#0277bd;
+}
+.register-btn:hover a{
+    color:#0277bd;
 }
