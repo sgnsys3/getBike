@@ -107,10 +107,9 @@ a.nav-my-menu {
   background: transparent;
 }
 .pic-detail{
-    width:5em;
+    width:5em ;
     border-radius: 50%;
-    border:2px solid white;
-    padding: 15px;
+    padding: 10px;
 }
 #schedule{
   height: 60vh;
@@ -203,8 +202,9 @@ a.nav-my-menu {
     display: inline-block;
     border: 1px solid white;
     padding: 15px;
-    margin-top: 5%;
-
+    margin-top: 3%;
+    font-weight: 600;
+    font-size: 1.1em;
     text-align: center;
 }
 .register-btn:hover{
@@ -229,4 +229,9 @@ a.nav-my-menu {
     color: white;
     width: 2em;
     height: 2em;
+}
+.sponsor-img{
+    width: 7em;
+    height: 7em;
+    margin-right: 1em;
 }

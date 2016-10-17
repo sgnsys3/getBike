@@ -6,10 +6,17 @@
     <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/aos.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Kanit:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
-    <script type="text/javascript">
-
-    </script>
+    <script src="{{ URL::asset('js/aos.js') }}"></script>
+    <script>
+    AOS.init({
+      offset: 200,
+      duration: 600,
+      easing: 'ease-in-sine',
+      delay: 100,
+    });
+  </script>
 </head>
 <body>
   <header>
@@ -67,16 +74,16 @@
     <div class="col-sm-6" style="background-image: url('{{ URL::asset('media/picture/blue-filter-bg.jpg') }}'); height:400px;">
         <div class="detail-more-text">
       <h2 class="text-center" style="padding-bottom:10px; border-bottom:2px solid white">สิ่งที่ต้องเตรียมมา</h2>
-      <div class="row" style="margin-left:4em; margin-top:2em;">
+      <div class="row" style="margin-left:3.5em; margin-top:2em;">
       <div class="col-sm-12">
           <div class="col-sm-4 pic-detail" style="margin-right:5em;">
-              <img src="{{URL::asset('media/picture/transport.svg')}}" alt="" class="" style="pic-detail ">
+              <img src="{{URL::asset('media/picture/bicycle.svg')}}" alt="" class="pic-detail" style="border:2px solid white;">
           </div>
           <div class="col-sm-4 pic-detail" style="margin-right:5em;">
-              <img src="{{URL::asset('media/picture/fashion.svg')}}" alt="" class="" style="pic-detail">
+              <img src="{{URL::asset('media/picture/bicycle-helmet.svg')}}" alt="" class="pic-detail" style="border:2px solid white;">
           </div>
           <div class="col-sm-4 pic-detail">
-              <img src="{{URL::asset('media/picture/id-card.svg')}}" alt="" class="" style="pic-detail">
+              <img src="{{URL::asset('media/picture/id-card.svg')}}" alt="" class="pic-detail" style="border:2px solid white;">
           </div>
       </div>
       </div>
@@ -207,12 +214,17 @@
   <section id="contact">
       <div class="container-fluid">
           <div class="row">
-              <div class="col-sm-4 col-sm-offset-3">
+              <div class="col-sm-3 col-sm-offset-3" style="">
                   <h3>CONTACT</h3>
-
                   <p> <img src="{{ URL::asset('media/picture/fb.svg') }}" class="contact-img" alt="Responsive image" style=""> KMUTT GET BIKE</p>
                   <p><img src="{{ URL::asset('media/picture/twitter.svg') }}" class="contact-img" alt="Responsive image" style=""> @getbikekmutt</p>
                   <p><img src="{{ URL::asset('media/picture/phone.svg') }}" class="contact-img" alt="Responsive image" style=""> 024706969</p>
+             </div>
+             <div class="col-sm-5" >
+                 <h3>SPONSOR</h3>
+                 <a href="https://www.facebook.com/KMUTTBikeTradition/"><img src="{{ URL::asset('media/picture/kmutt_logo.jpg') }}" class="sponsor-img" alt="Responsive image" style=""></a>
+                <a href="https://twitter.com/KMUTTNews"><img src="{{ URL::asset('media/picture/prayut.png') }}" class="sponsor-img" alt="Responsive image" style=""></a>
+                <img src="{{ URL::asset('media/picture/dekcom.jpg') }}" class="sponsor-img" alt="Responsive image" style="">
              </div>
           </div>
       </div>
