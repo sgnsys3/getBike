@@ -4,10 +4,11 @@
     <title>GetBike - BMD to BKT KMUTT</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/style.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Kanit:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
     <script type="text/javascript">
-        
+
     </script>
 </head>
 <body>
@@ -44,11 +45,11 @@
     <div class="container-fluid">
       <div style="margin-top:10em">
         <div class="row">
-          <div class="col-sm-3 col-sm-offset-5">
+          <div class="text-center">
           <p class="text-detail" style="font-size:2.2em">GET BIKE</p>
           </div>
         </div>
-        <div class="row" style="margin-left:-8%">
+        <div class="row" style="text-center">
           <center>
             <p class="text-detail" style="font-weight: 300;">เราคือโครงการจักรยานประเพณี มจธ. บางมด - บางขุนเทียน กิจกรรมปั่นจักรยานทางไกลข้ามวิทยาเขต<br>จากมจธ.บางมด ไปยังมจธ. บางขุนเทียน ระยะทางรวม 44 กิโลเมตร โดยนักศึกษา บุคลากร และบุคคลภายนอกสามารถเข้าร่วมได้ฟรี <br>ไม่มีค่าใช้จ่าย</p>
           </center>
@@ -57,31 +58,37 @@
     </div>
   </section>
 
-<section id="detail-more">
+<section id="detail-more" >
   <div class="container-fluid" style=" margin:0; padding:0;">
-    <div class="col-sm-6">
-      <h2>สิ่งที่ต้องเตรียมมา</h2>
-      <p>* จักรยาน</p>
-      <p>* หมวกกันกระแทกสำหรับจักรยาน</p>
-      <p>* บัตรประจำตัวประชาชน <br>หรือบัตรอื่นๆ ที่ราชการออกให้เพื่อใช้ในการลงทะเบียนในวันงาน</p>
-    </div>
+
     <div class="col-sm-6" style="height:350px  margin:0; padding:0;">
-      <div class="parallax-window" data-parallax="scroll" data-image-src="{{ URL::asset('media/picture/biker.jpg') }}"></div>
+      <div class="parallax-window" data-parallax="scroll" data-image-src="{{ URL::asset('media/picture/tu1.jpg') }}"></div>
+    </div>
+    <div class="col-sm-6" style="background-color:#616161; height:400px">
+        <div class="detail-more-text">
+      <h2 class="text-center">สิ่งที่ต้องเตรียมมา</h2>
+      <p class="text-left">* จักรยาน</p>
+      <p class="text-left">* หมวกกันกระแทกสำหรับจักรยาน</p>
+      <p class="text-left">* บัตรประจำตัวประชาชน <br>หรือบัตรอื่นๆ ที่ราชการออกให้เพื่อใช้ในการลงทะเบียนในวันงาน</p>
+    </div>
     </div>
   </div>
 </section>
-<section id="detail-more-2">
+<section id="detail-more-2" >
   <div class="container-fluid" style=" margin:0; padding:0;">
     <div class="col-sm-6" style="height:350px  margin:0; padding:0;">
-      <div class="parallax-window" data-parallax="scroll" data-image-src="{{ URL::asset('media/picture/biker.jpg') }}"></div>
+      <div class="parallax-window" data-parallax="scroll" data-image-src="{{ URL::asset('media/picture/tu2.jpg') }}"></div>
     </div>
-    <div class="col-sm-6">
-      <h2>คุณสมบัติในการเข้าร่วม</h2>
-      <p>* มีอายุ 15 ปีขึ้นไป</p>
-      <p>* ต้องสวมหมวกกันกระแทกสำหรับจักรยาน และรัดสายรัดให้เรียบร้อยในระหว่างการเข้าร่วมกิจกรรม</p>
-      <p>* มีทักษะในการปั่นจักรยานทางแคบได้ และปั่นในเส้นทางที่ผู้จัดกิจกรรมจัดให้เท่านั้น</p>
-      <p>* สุขภาพร่างกายแข็งแรง</p>
-      <p>* งดดื่มสุราหรือของมึนเมาก่อนเข้าร่วมโครงการอย่างน้อย 12 ชั่วโมง</p>
+    <div class="col-sm-6" style="background-color:#616161; height:400px">
+    <div class="detail-more-text">
+      <h2 class="text-center">คุณสมบัติในการเข้าร่วม</h2>
+      <p class="text-left">* มีอายุ 15 ปีขึ้นไป</p>
+      <p class="text-left">* ต้องสวมหมวกกันกระแทกสำหรับจักรยาน และรัดสายรัดให้เรียบร้อยในระหว่างการเข้าร่วมกิจกรรม</p>
+      <p class="text-left">* มีทักษะในการปั่นจักรยานทางแคบได้ และปั่นในเส้นทางที่ผู้จัดกิจกรรมจัดให้เท่านั้น</p>
+      <p class="text-left">* สุขภาพร่างกายแข็งแรง</p>
+      <p class="text-left">* งดดื่มสุราหรือของมึนเมาก่อนเข้าร่วมโครงการอย่างน้อย 12 ชั่วโมง</p>
+    </div>
+    </div>
     </div>
   </div>
 </section>
@@ -130,10 +137,10 @@
   </div>
 </section>
 <section id="map">
-<div class="col-sm-12" style="background-color:gray">
+<div class="col-sm-12" style="background-color:#263238">
   <div class="col-sm-8 col-sm-offset-2">
     <div class="col-sm-6">
-      <h2>START LOCATION</h2>
+      <h1 style="color:white; border-bottom:1px solid white">START LOCATION</h1>
       <div class="container-fluid">
           <div class="row">
         <div class="col-sm-2">
@@ -146,8 +153,8 @@
           </div>
         </div>
         <div class="col-sm-10">
-            <p style="margin-left:-1.5em; margin-top:1em;">King Mongkut's University of Technology Thonburi</p>
-            <p style="margin-left:-1.5em; margin-top:1em;">126 Pracha Uthit Rd., Bang Mod, Thung Khru, Bangkok 10140, Thailand</p>
+            <p style="margin-left:-2.0em; margin-top:2em; color:white;">King Mongkut's University of Technology Thonburi</p>
+            <p style="margin-left:-2.0em; margin-top:1.5em; color:white;">126 Pracha Uthit Rd., Bang Mod, Thung Khru, Bangkok 10140, Thailand</p>
         </div>
       </div>
       </div>
@@ -158,14 +165,7 @@
   </div>
 </div>
 </section>
-  <!-- <section id="member">
-    <div class="row">
-      <div class="col-sm-3 col-sm-offset-5">
-      <h3 class="">จำนวนนักปั่นที่เข้าร่วม</h3>
-      <h3 style="margin-left:20%"><b>XXXX คน</b></h3>
-    </div>
-  </div>
-  </section> -->
+
   <section id="register" style="background-image: url('{{ URL::asset('media/picture/blue-filter-bg.jpg') }}');">
     <div class="container-fluid">
         <div class="row">
@@ -175,13 +175,25 @@
             </div>
         </div>
         <div class="col-sm-4 col-sm-offset-4 text-center">
-        <div class="register-btn text-center">
+        <div class="register-btn text-center animated infinite pulse">
             <a href="#" class="text-center">ร่วมเป็นส่วนหนึ่งกับพวกเรา</a>
         </div>
         </div>
     </div>
   </section>
+  <section id="contact">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-sm-4 col-sm-offset-3">
+                  <h3>CONTACT</h3>
 
+                  <p> <img src="{{ URL::asset('media/picture/fb.svg') }}" class="contact-img" alt="Responsive image" style=""> Phachara Kamthong</p>
+                  <p><img src="{{ URL::asset('media/picture/twitter.svg') }}" class="contact-img" alt="Responsive image" style=""> @pcr.mix</p>
+             </div>
+          </div>
+      </div>
+  </section>
+  <div id="line"></div>
   <script src="{{ URL::asset('js/script.js') }}"></script>
   <script src="{{ URL::asset('js/particles.js') }}"></script>
   <script src="{{ URL::asset('js/particles.run.app.js') }}"></script>
