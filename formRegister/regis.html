@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title></title>
+    <link rel="stylesheet" href="css\bootstrap.css">
+  </head>
+  <body>
+    <div class="container-fluidr">
+      <div class="row">
+        <div class="col-md-5 col-md-offset-5">
+          <h1>ลงทะเบียน</h1><br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+          <form role="form" action="" method="post">
+              <div class="form-group">
+                <label>ชื่อ-นามสกุล</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" name="inputName" size="41" placeholder="ชื่อ-นามสกุล">
+                </div>
+              </div>
+                <div class="form-group">
+                    <label>อีเมล</label>
+                    <div class="input-group">
+                      <input type="email" class="form-control" name="inputEmail" size="45" placeholder="abcd@xyz.com">
+                  </div>
+                </div>
+                <div class="form-group">
+                    <label>เบอร์โทรศัพท์</label>
+                    <div class="input-group">
+                      <input type="tel" class="form-control" name="inputTel" placeholder="08xxxxxxxx">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-group">
+                      <label>วันเกิด</label>
+                      <div class="input-groub">
+                        <input type="date" naem="inputBirthday"class="form-control" min="2001-12-24">
+                    </div>
+                    <div class="form-group">
+                        <label>อายุ</label>
+                        <div class="input-group">
+                          <input type="text" name="inputAge" class="form-control" size="2" placeholder="15">
+                      </div>
+                    </div>
+                  </div>
+                    <label>เพศ</label>
+                    <div class="input-group">
+                      <select class="form-control" name="inputGender">
+                        <option value="none"></option>
+                        <option value="ชาย">ชาย</option>
+                        <option value="หญิง">หญิง</option>
+                        <option value="อื่นๆ">อื่น ๆ</option>
+                      </select>
+                  </div>
+                </div>
+        <input type="button" name="submit" id="submit" class="btn btn-info" value="ส่ง">
+              </form>
+            </div>
+          </div>
+      </div>
+</body>
+</html>
