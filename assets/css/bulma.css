@@ -971,7 +971,6 @@ a.box:active {
   border-width: 0;
   color: white;
 }
-
 .button.is-success:hover, .button.is-success:focus, .button.is-success.is-active {
   background-color: #20bc56;
   border-color: transparent;
@@ -6762,5 +6761,6 @@ a.panel-block:hover {
   border-bottom-color: #00d1b2;
 }
 /*# sourceMappingURL=bulma.css.map */
+
 .button.is-special {   padding:1.5em 1em 1.5em 1em;   background-color: #00b0ff;   border-width: 0;   color: white; }
 .button.is-special:hover {   padding:1.5em 1em 1.5em 1em;   background-color: #0091ea;   border-width: 0;   color: white; }
