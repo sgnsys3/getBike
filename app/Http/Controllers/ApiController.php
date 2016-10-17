@@ -27,6 +27,19 @@ class ApiController extends Controller {
   }
 
   public function checkRegisterCode(Request $request) {
-    return "not use";
+    $this->validate($request,[
+      'first_name_check' => 'required|max:255',
+      'last_name_check' => 'required|max:255',
+      'phone_number_check' => 'required|numeric|digits_between:9,10' ,
+      'email_check' => 'required|email'
+    ]);
+    $info = registerInformation::where([
+      ['first_name' , '=' , $request->input('first_name_check')] ,
+      ['last_name' , '=' , $request->input('last_name_check')] ,
+      ['phone_number' , '=' , $request->input('phone_number_check')] ,
+      ['email' , '=' , $request->input('email_check')]
+    ])->first();
+    if($info != NULL) return $info->id;
+    else return -1;
   }
 }
