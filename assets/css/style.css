@@ -121,11 +121,58 @@ a.nav-my-menu {
   background: transparent;
 }
 #schedule{
-  height: 100vh;
+  height: 60vh;
 }
 .locationbm{
-  margin-top:3.4em;
+  margin-top:2.6em;
+  margin-left: -1.6em;
   font-weight: 300;
   font-size:1.9em;
   transform: rotate(-90deg);
 }
+#map{
+    height: 20em;
+}
+#map-iframe{
+    width: 26em;
+    height: 20em;
+}
+.button-bulma{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: white;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    color: #363636;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    font-size: 14px;
+    height: 32px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    line-height: 24px;
+    padding-left: 8px;
+    padding-right: 8px;
+    position: relative;
+    vertical-align: top;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    white-space: nowrap;
+}
+.button-bulma.is-special {   padding:1.5em 1em 1.5em 1em;   background-color: #00b0ff;   border-width: 0;   color: white; }
+.button-bulma.is-special:hover {   padding:1.5em 1em 1.5em 1em;   background-color: #0091ea;   border-width: 0;   color: white; }
