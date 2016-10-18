@@ -106,22 +106,28 @@ a.nav-my-menu {
   min-height: 400px;
   background: transparent;
 }
+.pic-detail{
+    width:5em ;
+    border-radius: 50%;
+    padding: 10px;
+}
 #schedule{
   height: 60vh;
 }
 .locationbm{
-  margin-top:2.6em;
-  margin-left: -1.6em;
-  font-weight: 300;
-  font-size:1.9em;
+  margin-top:2.5em;
+  margin-left: -2em;
+  font-weight: 400;
+  font-size:2em;
   transform: rotate(-90deg);
+  color: white;
 }
 #map{
-    height: 20em;
+    height: 25em;
 }
 #map-iframe{
-    width: 26em;
-    height: 20em;
+    width: 30em;
+    height: 25em;
 }
 .button-bulma{
     -moz-appearance: none;
@@ -170,4 +176,89 @@ a.nav-my-menu {
   padding: 0;
   width: 100%;
   height: 100%;
+}
+.detail-more-text{
+    font-size:1.3em;
+    font-weight: 300;
+    color: white;
+}
+#register{
+    height: 100vh;
+    color: white;
+}
+.register-text{
+    margin-top: 30vh;
+    font-size: 1.7em;
+    margin-bottom: 5vh;
+}
+.register-btn a{
+    color: white;
+    font-size:1.5em;
+    text-decoration: none;
+    text-align: center;
+}
+.register-btn{
+    color: white;
+    display: inline-block;
+    border: 1px solid white;
+    padding: 15px;
+    margin-top: 3%;
+    font-weight: 600;
+    font-size: 1.1em;
+    text-align: center;
+}
+.register-btn:hover{
+    background-color: white;
+    color:#0277bd;
+    transition: .6s;
+}
+.register-btn:hover a{
+    color:#0277bd;
+    transition: .6s;
+}
+.forget-btn{
+    color: white;
+    display: inline-block;
+    border: 1px solid white;
+    padding: 10px;
+    margin-top: 3%;
+    font-weight: 300;
+    font-size: .8em;
+    text-align: center;
+    text-decoration: none;
+}
+.forget-btn a{
+    color: white;
+    font-size:1.5em;
+    font-weight: 400;
+    text-decoration: none;
+    text-align: center;
+}
+.forget-btn:hover{
+    background-color:#c62828;
+    color:#c62828;
+    transition: .6s;
+}
+.forget-btn:hover a{
+    color:white;
+    transition: .6s;
+}
+#contact{
+    color: white;
+    background-color: #212121 ;
+    height: 30vh;
+}
+#line{
+    height: 0.5vh;
+    background-color: #0277bd;
+}
+.contact-img{
+    color: white;
+    width: 2em;
+    height: 2em;
+}
+.sponsor-img{
+    width: 7em;
+    height: 7em;
+    margin-right: 1em;
 }
