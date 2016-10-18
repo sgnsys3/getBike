@@ -125,4 +125,11 @@ function checkRegisterCode() {
     }
   });
 }
+
+function getScrollCurrent() {
+  if($(window).scrollTop() > 800) {
+    alert(">800");
+  }
+  console.log($(window).scrollTop());
+}
 //Smooth Scroll

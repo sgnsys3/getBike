@@ -22,7 +22,7 @@
 </head>
 <body>
   <header>
-    <div id="nav_primary">
+    <div id="nav_primary" class="nav_primary">
       <div class="col-sm-12">
         <div class="col-sm-1 col-sm-offset-7"><a class="hvr-underline-from-center nav-my-menu" href="#intro">HOME</a></div>
         <div class="col-sm-1"><a class="hvr-underline-from-center nav-my-menu" href="#detail">DETAIL</a></div>
@@ -258,10 +258,12 @@
             <div id="first_name-control_check" class="form-group">
               <label for="first_name_check">ชื่อจริง</label>
               <input type="text" class="form-control" id="first_name_check" placeholder="First Name" tabindex="1">
+              <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
             </div>
             <div id="last_name-control_check" class="form-group">
               <label for="last_name_check">นามสกุล</label>
               <input type="text" class="form-control" id="last_name_check" placeholder="Last Name" tabindex="2">
+              <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
             </div>
             <div id="phone_number-control_check" class="form-group">
               <label for="phone_number_check">เบอร์โทรศัพท์ โดยไม่มี -</label>
@@ -295,10 +297,12 @@
             <div id="first_name-control" class="form-group">
               <label for="first_name">ชื่อจริง</label>
               <input type="text" class="form-control" id="first_name" placeholder="First Name" tabindex="1">
+              <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
             </div>
             <div id="last_name-control"class="form-group">
               <label for="last_name">นามสกุล</label>
               <input type="text" class="form-control" id="last_name" placeholder="Last Name" tabindex="2">
+              <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
             </div>
             <div id="phone_number-control" class="form-group">
               <label for="phone_number">เบอร์โทรศัพท์ โดยไม่มี -</label>
@@ -371,6 +375,24 @@
     $("#checkRegisterCodeForm").submit(function (e) {
         e.preventDefault();
         checkRegisterCode();
+    });
+    $(window).bind('scroll', function () {
+      if($(window).scrollTop() >= 600) {
+        if($(window).scrollTop() > 700) {
+          $('#nav_primary').css("padding-top","1em");
+          $('#nav_primary').css("background-color","rgba(0,0,0,1)");
+        }
+        else {
+          var mapPaddingTop = 4-(($(window).scrollTop()-600)*3)/100;
+          var mapRGBA = ($(window).scrollTop()-600)/100;
+          $('#nav_primary').css("background-color","rgba(0,0,0,"+mapRGBA+")");
+          $('#nav_primary').css("padding-top",""+mapPaddingTop+"em");
+        }
+      }
+      else {
+        $('#nav_primary').css("padding-top","4em");
+        $('#nav_primary').css("background-color","transparent");
+      }
     });
   </script>
 </body>

@@ -6,13 +6,14 @@ body{
 
 /*section nav*/
 
-#nav_primary{
-  margin-top:8vh;
+.nav_primary{
+  padding-top: 4em;
   width: 99vw;
-  position: absolute;
+  position: fixed;
   z-index: 10;
   background-color: transparent;
 }
+
 a.nav-my-menu {
   background-color: transparent;
   padding-left: 1em;
