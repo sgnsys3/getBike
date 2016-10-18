@@ -196,8 +196,7 @@
   </div>
 </div>
 </section>
-  <section id="register" style="wrapper">
-    <div class="sliding-background"></div>
+  <section id="register" style="background: url({{ URL::asset('/media/image/blue-filter-bg.jpg') }})">
     <div class="container-fluid">
         <div class="row">
             <div class="register-text">
@@ -215,7 +214,6 @@
         </div>
     </div>
   </section>
-
   <!-- <div class="register-btn text-center">
       <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#registerModal">
         ร่วมเป็นส่วนหนึ่งกับพวกเรา

@@ -309,13 +309,13 @@ a.nav-my-menu {
 
 /*Start Infinite Slideshow*/
 .wrapper {
+  width: 100vw;
   overflow: hidden;
 }
 
 .sliding-background {
-  position: absolute;
   z-index: -1;
-  background: url("https://doc-08-0o-docs.googleusercontent.com/docs/securesc/5f5071lejihrep8jh2m9v734gd5r876u/3eb2d62ho8iu7jf4tn3udk7tg8uujsd6/1476770400000/12174350499075686262/12174350499075686262/0B4ENK_zdFW63eWQ2dWkwZVV6VEk?h=07748365952336715631&e=download&nonce=sb0nb7eur7274&user=12174350499075686262&hash=gb39a96uv8avjbue96rh076qhrbd2jfo") repeat-x;
+  background: url(http://getbike.local/media/image/blue-filter-bg.jpg) repeat-x;
   height: 100vh;
   width: 2000px;
   animation: slide 20s linear infinite;
