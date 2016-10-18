@@ -70,7 +70,7 @@
 <section id="detail-more" >
   <div class="container-fluid" style=" margin:0; padding:0;">
     <div class="col-sm-6" style="background-image: url('{{ URL::asset('media/picture/blue-filter-bg.jpg') }}'); height:400px;">
-        <div class="detail-more-text">
+        <div class="detail-more-text" >
       <h2 class="text-center" style="padding-bottom:10px; border-bottom:2px solid white">สิ่งที่ต้องเตรียมมา</h2>
       <div class="row" style="margin-left:3.5em; margin-top:2em;">
       <div class="col-sm-12">
