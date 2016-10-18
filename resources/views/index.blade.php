@@ -52,7 +52,7 @@
     <div class="container-fluid">
       <div style="margin-top:10em">
         <div class="row">
-          <div class="text-center">
+          <div class="text-center" aos="fade-up" aos-offset="400" aos-duration="1000">
           <p class="text-detail" style="font-size:2.2em">GET BIKE</p>
           </div>
         </div>
@@ -67,10 +67,6 @@
 
 <section id="detail-more" >
   <div class="container-fluid" style=" margin:0; padding:0;">
-
-    <div class="col-sm-6" style="height:350px  margin:0; padding:0;">
-      <div class="parallax-window" data-parallax="scroll" data-image-src="{{ URL::asset('media/picture/tu1.jpg') }}"></div>
-    </div>
     <div class="col-sm-6" style="background-image: url('{{ URL::asset('media/picture/blue-filter-bg.jpg') }}'); height:400px;">
         <div class="detail-more-text">
       <h2 class="text-center" style="padding-bottom:10px; border-bottom:2px solid white">สิ่งที่ต้องเตรียมมา</h2>
@@ -101,6 +97,9 @@
       </div>
       </div>
       </div>
+    </div>
+    <div class="col-sm-6" style="height:350px  margin:0; padding:0;">
+      <div class="parallax-window" data-parallax="scroll" data-image-src="{{ URL::asset('media/picture/tu1.jpg') }}"></div>
     </div>
   </div>
 </section>
