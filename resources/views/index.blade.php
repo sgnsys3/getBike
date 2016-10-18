@@ -3,6 +3,7 @@
 <head>
     <title>GetBike - BMD to BKT KMUTT</title>
     <meta charset="utf-8">
+    <meta name="_token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/style.css') }}">
@@ -17,6 +18,7 @@
       delay: 100,
     });
   </script>
+    <script src="{{ URL::asset('js/getbike.js') }}"></script>
 </head>
 <body>
   <header>
@@ -25,8 +27,8 @@
         <div class="col-sm-1 col-sm-offset-7"><a class="hvr-underline-from-center nav-my-menu" href="#intro">HOME</a></div>
         <div class="col-sm-1"><a class="hvr-underline-from-center nav-my-menu" href="#detail">DETAIL</a></div>
         <div class="col-sm-1"><a class="hvr-underline-from-center nav-my-menu" href="#map">LOCATION</a></div>
-        <div class="col-sm-1"><a class="hvr-underline-from-center nav-my-menu" href="">CONTACT</a></div>
-        <div class="col-sm-1"><a href="" class="button-bulma is-special " style="margin-top:-0.8em; text-decoration:none;">REGISTER</a></div>
+        <div class="col-sm-1"><a class="hvr-underline-from-center nav-my-menu" href="#contact">CONTACT</a></div>
+        <div class="col-sm-1"><a href="#register" class="button-bulma is-special " style="margin-top:-0.8em; text-decoration:none;">REGISTER</a></div>
       </div>
     </div>
   </header>
@@ -165,25 +167,25 @@
     </div>
   </div>
 </section>
-<section id="map">
-<div class="col-sm-12" style="background-color:#263238">
-  <div class="col-sm-8 col-sm-offset-2">
+<section id="map" style="background-color:#263238">
+<div class="col-sm-12">
+  <div class="col-sm-10 col-sm-offset-1">
     <div class="col-sm-6">
-      <h1 style="color:white; border-bottom:1px solid white">START LOCATION</h1>
+      <h1 style="color:white; border-bottom:1px solid white; margin-top:2em">START LOCATION</h1>
       <div class="container-fluid">
           <div class="row">
         <div class="col-sm-2">
           <div class="container-fluid">
             <div class="row">
-              <div class="locationbm">
+              <div class="locationbm" style="border-bottom:1px solid white">
                 BANGMOD
               </div>
             </div>
           </div>
         </div>
         <div class="col-sm-10">
-            <p style="margin-left:-2.0em; margin-top:2em; color:white;">King Mongkut's University of Technology Thonburi</p>
-            <p style="margin-left:-2.0em; margin-top:1.5em; color:white;">126 Pracha Uthit Rd., Bang Mod, Thung Khru, Bangkok 10140, Thailand</p>
+            <p style="margin-left:-2.0em; margin-top:1em; color:white; font-size:1.3em;">King Mongkut's University of Technology Thonburi</p>
+            <p style="margin-left:-2.7em; margin-top:2em; color:white;">126 Pracha Uthit Rd., Bang Mod, Thung Khru, Bangkok 10140, Thailand</p>
         </div>
       </div>
       </div>
@@ -194,22 +196,34 @@
   </div>
 </div>
 </section>
-
   <section id="register" style="background-image: url('{{ URL::asset('media/picture/blue-filter-bg.jpg') }}');">
-    <div class="container-fluid">
+    <div class="container-fluid ">
         <div class="row">
             <div class="register-text">
             <p class="text-center" style="font-weight:300;">จำนวนคนที่เข้าร่วม</p>
-            <p class="text-center" style="font-size:2em">XXX คน</p>
+            <p id="currentParticipant" class="text-center" style="font-size:2em"></p>
             </div>
         </div>
         <div class="col-sm-4 col-sm-offset-4 text-center">
-        <div class="register-btn text-center animated infinite pulse">
-            <a href="#" class="text-center">ร่วมเป็นส่วนหนึ่งกับพวกเรา</a>
+        <div data-toggle="modal" data-target="#registerModal" class="register-btn text-center animated infinite pulse">
+            <a class="text-center">ร่วมเป็นส่วนหนึ่งกับพวกเรา</a>
+        </div>
+        <div data-toggle="modal" data-target="#forgetRegisterCodeModal" class="forget-btn text-center animated fadeIn">
+            <a class="text-center">ลืมรหัสลงทะเบียน</a>
         </div>
         </div>
     </div>
   </section>
+
+  <!-- <div class="register-btn text-center">
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#registerModal">
+        ร่วมเป็นส่วนหนึ่งกับพวกเรา
+      </button>
+      <br>
+      <br>
+      <button type="button" class="btn btn-danger btn-md" data-toggle="modal" data-target="#forgetRegisterCodeModal">
+        ลืมรหัสลงทะเบียน
+      </button> -->
   <section id="contact">
       <div class="container-fluid">
           <div class="row">
@@ -229,11 +243,135 @@
       </div>
   </section>
   <div id="line"></div>
+
+  <!-- Modal -->
+
+  <div class="modal fade" id="forgetRegisterCodeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel" style="color:red">ลืมรหัสลงทะเบียน</h4>
+        </div>
+        <form id="checkRegisterCodeForm" action="">
+        <div class="modal-body">
+            <div id="first_name-control_check" class="form-group">
+              <label for="first_name_check">ชื่อจริง</label>
+              <input type="text" class="form-control" id="first_name_check" placeholder="First Name" tabindex="1">
+            </div>
+            <div id="last_name-control_check" class="form-group">
+              <label for="last_name_check">นามสกุล</label>
+              <input type="text" class="form-control" id="last_name_check" placeholder="Last Name" tabindex="2">
+            </div>
+            <div id="phone_number-control_check" class="form-group">
+              <label for="phone_number_check">เบอร์โทรศัพท์ โดยไม่มี -</label>
+              <input type="text" class="form-control" id="phone_number_check" placeholder="Phone Number without '-' Ex. 0998889988" tabindex="3">
+              <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+            </div>
+            <div id="email-control_check" class="form-group">
+              <label for="email_check">อีเมลล์</label>
+              <input type="text" class="form-control" id="email_check" placeholder="E-Mail" tabindex="4">
+              <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">ปิด</button>
+          <button type="submit" class="btn btn-warning">ค้นหาข้อมูล</button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">ลงทะเบียน</h4>
+        </div>
+        <form id="registerForm" action="">
+        <div class="modal-body">
+            <div id="first_name-control" class="form-group">
+              <label for="first_name">ชื่อจริง</label>
+              <input type="text" class="form-control" id="first_name" placeholder="First Name" tabindex="1">
+            </div>
+            <div id="last_name-control"class="form-group">
+              <label for="last_name">นามสกุล</label>
+              <input type="text" class="form-control" id="last_name" placeholder="Last Name" tabindex="2">
+            </div>
+            <div id="phone_number-control" class="form-group">
+              <label for="phone_number">เบอร์โทรศัพท์ โดยไม่มี -</label>
+              <input type="text" class="form-control" id="phone_number" placeholder="Phone Number without '-' Ex. 0998889988" tabindex="3">
+              <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+            </div>
+            <div id="email-control" class="form-group">
+              <label for="email">อีเมลล์</label>
+              <input type="text" class="form-control" id="email" placeholder="E-Mail" tabindex="4">
+              <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">ปิด</button>
+          <button type="submit" class="btn btn-primary">ลงทะเบียน</button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="registerCodeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">รหัสลงทะเบียน</h4>
+        </div>
+        <div class="modal-body">
+          <h3 style="color : red; text-align: center" id="registerCodeHeader">กรุณาจดรหัสลงทะเบียนเพื่อใช้ในการลงทะเบียนที่หน้างาน</h3>
+          <h2 style="color : red; text-align: center" id="myRegisterCode"></h2>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">ปิด</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="{{ URL::asset('js/script.js') }}"></script>
   <script src="{{ URL::asset('js/particles.js') }}"></script>
   <script src="{{ URL::asset('js/particles.run.app.js') }}"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="{{ URL::asset('js/parallax.min.js') }}"></script>
-
+  <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
+  <script type="text/javascript">
+    var apiUpdateParticipant = "{{ route('api.getparticipant') }}";
+    var apiInsertParticipant = "{{ route('api.insertparticipant') }}";
+    var apiCheckRegisterCode = "{{ route('api.checkregistercode') }}";
+    window.onload = function() { updateParticipant(); }
+    var timer = setInterval(updateParticipant,2000);
+    $(function() {
+      $('a[href*="#"]:not([href="#"])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+      });
+    });
+    $("#registerForm").submit(function (e) {
+        e.preventDefault();
+        insertParticipant();
+    });
+    $("#checkRegisterCodeForm").submit(function (e) {
+        e.preventDefault();
+        checkRegisterCode();
+    });
+  </script>
 </body>
 </html>

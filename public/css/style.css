@@ -123,11 +123,11 @@ a.nav-my-menu {
   color: white;
 }
 #map{
-    height: 20em;
+    height: 25em;
 }
 #map-iframe{
-    width: 26em;
-    height: 20em;
+    width: 30em;
+    height: 25em;
 }
 .button-bulma{
     -moz-appearance: none;
@@ -214,6 +214,33 @@ a.nav-my-menu {
 }
 .register-btn:hover a{
     color:#0277bd;
+    transition: .6s;
+}
+.forget-btn{
+    color: white;
+    display: inline-block;
+    border: 1px solid white;
+    padding: 10px;
+    margin-top: 3%;
+    font-weight: 300;
+    font-size: .8em;
+    text-align: center;
+    text-decoration: none;
+}
+.forget-btn a{
+    color: white;
+    font-size:1.5em;
+    font-weight: 400;
+    text-decoration: none;
+    text-align: center;
+}
+.forget-btn:hover{
+    background-color:#c62828;
+    color:#c62828;
+    transition: .6s;
+}
+.forget-btn:hover a{
+    color:white;
     transition: .6s;
 }
 #contact{
