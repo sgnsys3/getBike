@@ -1,5 +1,7 @@
 window.onload = function() { updateParticipant(); }
 var timer = setInterval(updateParticipant,2000);
+
+//Start smooth scroll
 $(function() {
   $('a[href*="#"]:not([href="#"])').click(function() {
   if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -14,6 +16,8 @@ $(function() {
   }
   });
 });
+//End smooth scroll
+
 $("#registerForm").submit(function (e) {
     e.preventDefault();
     insertParticipant();

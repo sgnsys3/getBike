@@ -196,8 +196,9 @@
   </div>
 </div>
 </section>
-  <section id="register" style="background-image: url('{{ URL::asset('media/picture/blue-filter-bg.jpg') }}');">
-    <div class="container-fluid ">
+  <section id="register" style="wrapper">
+    <div class="sliding-background"></div>
+    <div class="container-fluid">
         <div class="row">
             <div class="register-text">
             <p class="text-center" style="font-weight:300;">จำนวนคนที่เข้าร่วม</p>
