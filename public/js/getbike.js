@@ -125,4 +125,5 @@ function checkRegisterCode() {
     }
   });
 }
+
 //Smooth Scroll

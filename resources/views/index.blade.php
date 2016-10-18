@@ -22,19 +22,19 @@
 </head>
 <body>
   <header>
-    <div id="nav_primary">
+    <div id="nav_primary" class="nav_primary">
       <div class="col-sm-12">
-        <div class="col-sm-1 col-sm-offset-7"><a class="hvr-underline-from-center nav-my-menu" href="#intro">HOME</a></div>
-        <div class="col-sm-1"><a class="hvr-underline-from-center nav-my-menu" href="#detail">DETAIL</a></div>
-        <div class="col-sm-1"><a class="hvr-underline-from-center nav-my-menu" href="#map">LOCATION</a></div>
-        <div class="col-sm-1"><a class="hvr-underline-from-center nav-my-menu" href="#contact">CONTACT</a></div>
+        <div class="col-sm-1 col-sm-offset-7"><a id="home-nav" class="hvr-underline-white nav-my-menu" href="#intro">HOME</a></div>
+        <div class="col-sm-1"><a id="detail-nav" class="hvr-underline-white nav-my-menu" href="#detail">DETAIL</a></div>
+        <div class="col-sm-1"><a id="location-nav" class="hvr-underline-white nav-my-menu" href="#map">LOCATION</a></div>
+        <div class="col-sm-1"><a id="contract-nav" class="hvr-underline-white nav-my-menu" href="#contact">CONTACT</a></div>
         <div class="col-sm-1"><a href="#register" class="button-bulma is-special " style="margin-top:-0.8em; text-decoration:none;">REGISTER</a></div>
       </div>
     </div>
   </header>
 
 
-  <section id="intro" style="width:100%; height:100%">
+  <section id="intro" style="width:100vw; height:100%">
           <div class="vdo">
             <div class="intro-content">
               <h1><b>GET YOUR BIKE,</b></h1>
@@ -196,8 +196,9 @@
   </div>
 </div>
 </section>
-  <section id="register" style="background-image: url('{{ URL::asset('media/picture/blue-filter-bg.jpg') }}');">
-    <div class="container-fluid ">
+  <section id="register" style="wrapper">
+    <div class="sliding-background"></div>
+    <div class="container-fluid">
         <div class="row">
             <div class="register-text">
             <p class="text-center" style="font-weight:300;">จำนวนคนที่เข้าร่วม</p>
@@ -258,10 +259,12 @@
             <div id="first_name-control_check" class="form-group">
               <label for="first_name_check">ชื่อจริง</label>
               <input type="text" class="form-control" id="first_name_check" placeholder="First Name" tabindex="1">
+              <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
             </div>
             <div id="last_name-control_check" class="form-group">
               <label for="last_name_check">นามสกุล</label>
               <input type="text" class="form-control" id="last_name_check" placeholder="Last Name" tabindex="2">
+              <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
             </div>
             <div id="phone_number-control_check" class="form-group">
               <label for="phone_number_check">เบอร์โทรศัพท์ โดยไม่มี -</label>
@@ -295,10 +298,12 @@
             <div id="first_name-control" class="form-group">
               <label for="first_name">ชื่อจริง</label>
               <input type="text" class="form-control" id="first_name" placeholder="First Name" tabindex="1">
+              <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
             </div>
             <div id="last_name-control"class="form-group">
               <label for="last_name">นามสกุล</label>
               <input type="text" class="form-control" id="last_name" placeholder="Last Name" tabindex="2">
+              <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
             </div>
             <div id="phone_number-control" class="form-group">
               <label for="phone_number">เบอร์โทรศัพท์ โดยไม่มี -</label>
@@ -348,30 +353,8 @@
     var apiUpdateParticipant = "{{ route('api.getparticipant') }}";
     var apiInsertParticipant = "{{ route('api.insertparticipant') }}";
     var apiCheckRegisterCode = "{{ route('api.checkregistercode') }}";
-    window.onload = function() { updateParticipant(); }
-    var timer = setInterval(updateParticipant,2000);
-    $(function() {
-      $('a[href*="#"]:not([href="#"])').click(function() {
-      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-        if (target.length) {
-          $('html, body').animate({
-            scrollTop: target.offset().top
-          }, 1000);
-          return false;
-        }
-      }
-      });
-    });
-    $("#registerForm").submit(function (e) {
-        e.preventDefault();
-        insertParticipant();
-    });
-    $("#checkRegisterCodeForm").submit(function (e) {
-        e.preventDefault();
-        checkRegisterCode();
-    });
   </script>
+
+  <script src="{{ URL::asset('js/footer.js') }}"></script>
 </body>
 </html>
