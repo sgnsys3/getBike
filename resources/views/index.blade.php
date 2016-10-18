@@ -24,17 +24,17 @@
   <header>
     <div id="nav_primary" class="nav_primary">
       <div class="col-sm-12">
-        <div class="col-sm-1 col-sm-offset-7"><a class="hvr-underline-from-center nav-my-menu" href="#intro">HOME</a></div>
-        <div class="col-sm-1"><a class="hvr-underline-from-center nav-my-menu" href="#detail">DETAIL</a></div>
-        <div class="col-sm-1"><a class="hvr-underline-from-center nav-my-menu" href="#map">LOCATION</a></div>
-        <div class="col-sm-1"><a class="hvr-underline-from-center nav-my-menu" href="#contact">CONTACT</a></div>
+        <div class="col-sm-1 col-sm-offset-7"><a id="home-nav" class="hvr-underline-white nav-my-menu" href="#intro">HOME</a></div>
+        <div class="col-sm-1"><a id="detail-nav" class="hvr-underline-white nav-my-menu" href="#detail">DETAIL</a></div>
+        <div class="col-sm-1"><a id="location-nav" class="hvr-underline-white nav-my-menu" href="#map">LOCATION</a></div>
+        <div class="col-sm-1"><a id="contract-nav" class="hvr-underline-white nav-my-menu" href="#contact">CONTACT</a></div>
         <div class="col-sm-1"><a href="#register" class="button-bulma is-special " style="margin-top:-0.8em; text-decoration:none;">REGISTER</a></div>
       </div>
     </div>
   </header>
 
 
-  <section id="intro" style="width:100%; height:100%">
+  <section id="intro" style="width:100vw; height:100%">
           <div class="vdo">
             <div class="intro-content">
               <h1><b>GET YOUR BIKE,</b></h1>
@@ -352,48 +352,8 @@
     var apiUpdateParticipant = "{{ route('api.getparticipant') }}";
     var apiInsertParticipant = "{{ route('api.insertparticipant') }}";
     var apiCheckRegisterCode = "{{ route('api.checkregistercode') }}";
-    window.onload = function() { updateParticipant(); }
-    var timer = setInterval(updateParticipant,2000);
-    $(function() {
-      $('a[href*="#"]:not([href="#"])').click(function() {
-      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-        if (target.length) {
-          $('html, body').animate({
-            scrollTop: target.offset().top
-          }, 1000);
-          return false;
-        }
-      }
-      });
-    });
-    $("#registerForm").submit(function (e) {
-        e.preventDefault();
-        insertParticipant();
-    });
-    $("#checkRegisterCodeForm").submit(function (e) {
-        e.preventDefault();
-        checkRegisterCode();
-    });
-    $(window).bind('scroll', function () {
-      if($(window).scrollTop() >= 600) {
-        if($(window).scrollTop() > 700) {
-          $('#nav_primary').css("padding-top","1em");
-          $('#nav_primary').css("background-color","rgba(0,0,0,1)");
-        }
-        else {
-          var mapPaddingTop = 4-(($(window).scrollTop()-600)*3)/100;
-          var mapRGBA = ($(window).scrollTop()-600)/100;
-          $('#nav_primary').css("background-color","rgba(0,0,0,"+mapRGBA+")");
-          $('#nav_primary').css("padding-top",""+mapPaddingTop+"em");
-        }
-      }
-      else {
-        $('#nav_primary').css("padding-top","4em");
-        $('#nav_primary').css("background-color","transparent");
-      }
-    });
   </script>
+
+  <script src="{{ URL::asset('js/footer.js') }}"></script>
 </body>
 </html>
