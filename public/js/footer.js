@@ -26,7 +26,7 @@ $("#checkRegisterCodeForm").submit(function (e) {
     e.preventDefault();
     checkRegisterCode();
 });
-$(window).bind('scroll', function () {
+function navAdapt() {
   if($(window).scrollTop() >= 530) {
     if($(window).scrollTop() > 730) {
       $('#nav_primary').css("padding-top","1em");
@@ -35,6 +35,7 @@ $(window).bind('scroll', function () {
       $('#detail-nav').attr('class','hvr-underline-from-center nav-my-menu');
       $('#contract-nav').attr('class','hvr-underline-from-center nav-my-menu');
       $('#location-nav').attr('class','hvr-underline-from-center nav-my-menu');
+      $('#schdule-nav').attr('class','hvr-underline-from-center nav-my-menu');
     }
     else {
       var mapPaddingTop = 4-(($(window).scrollTop()-530)*1.5)/100;
@@ -50,5 +51,8 @@ $(window).bind('scroll', function () {
     $('#detail-nav').attr('class','hvr-underline-white nav-my-menu');
     $('#contract-nav').attr('class','hvr-underline-white nav-my-menu');
     $('#location-nav').attr('class','hvr-underline-white nav-my-menu');
+    $('#schdule-nav').attr('class','hvr-underline-white nav-my-menu');
   }
-});
+}
+$(window).bind('scroll', navAdapt);
+$(document).ready(navAdapt);
