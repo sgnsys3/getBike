@@ -29,7 +29,7 @@
     </header>
 
 
-    <section id="intro" style="width:100vw; height:100vh">
+    <section id="intro" style="">
         <div class="vdo">
             <div class="intro-content">
                 <h1><b>GET YOUR BIKE,</b></h1>
@@ -39,15 +39,15 @@
             <div id="particles-js"></div>
             <video autoplay loop preload="auto" class="vdo-responsive">
                   <source src="{{ URL::asset('media/video/intro-background.mp4') }}" type="video/mp4">
-                </video>
+            </video>
             <div class="blackbox"></div>
         </div>
     </section>
 
 
-    <section id="detail" data-aos="zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000">
-        <div class="container-fluid">
-            <div style="margin-top:14em">
+    <section id="detail" style="background-color:white;" >
+        <div class="container-fluid" data-aos="zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000">
+          <div style="margin-top:10%">
                 <div class="row">
                     <div class="text-center" aos="fade-up" aos-offset="400" aos-duration="1000">
                         <p class="text-detail" style="font-size:2.2em">GET BIKE</p>
@@ -58,7 +58,7 @@
                         <p class="text-detail" style="font-weight: 300;">เราคือโครงการจักรยานประเพณี มจธ. บางมด - บางขุนเทียน กิจกรรมปั่นจักรยานทางไกลข้ามวิทยาเขต<br>จากมจธ.บางมด ไปยังมจธ. บางขุนเทียน ระยะทางรวม 44 กิโลเมตร โดยนักศึกษา บุคลากร และบุคคลภายนอกสามารถเข้าร่วมได้ฟรี <br>ไม่มีค่าใช้จ่าย</p>
                     </center>
                 </div>
-            </div>
+                </div>
         </div>
     </section>
 
@@ -88,8 +88,8 @@
                     </div>
             </div>
             </div>
-            <div class="col-sm-6  hidden-xs hidden-sm" style="height:350px  margin:0; padding:0;">
-                <div class="parallax-window" data-parallax="scroll" data-image-src="{{ URL::asset('media/picture/tu1.jpg') }}"></div>
+            <div class="col-sm-6  hidden-xs hidden-sm" style="margin:0; padding:0;">
+                <div class="parallax-window" style="z-index:3;" data-parallax="scroll" data-image-src="{{ URL::asset('media/picture/tu1.jpg') }}"></div>
             </div>
     </section>
     <section id="detail-more-2">
@@ -111,50 +111,8 @@
         </div>
     </section>
     <section id="schedule" style="background-color:#fff">
-        <!-- <div class="container-fluid" style="margin-left:5vh; margin-right:5vh;">
-    <div class="row">
-      <div class="col-sm-3 col-sm-offset-5">
-      <h2 class="">ตารางเวลา</h2>
-      </div>
-      <div class="col-sm-5 col-sm-offset-4">
-      <h2 class="" style="margin-left:-1em;">วันเสาร์ที่ 24 ธันวาคม พ.ศ. 2559</h2>
-      </div>
-    </div>
-    <div class="row">
-      <table class="table table-striped">
-        <tr>
-          <th>เวลา</th>
-          <th>รายละเอียดกิจกรรม</th>
-        </tr>
-        <tr>
-          <td>06.30-07.30 น.</td>
-          <td>ลงทะเบียนกิจกรรม รับเสื้อที่ระลึก(สำหรับ 1000 ท่านแรกที่ลงทะเบียน) <br>บริเวณหน้าตึกอธิการบดี</td>
-        </tr>
-        <tr>
-          <td>07.30-08.00 น.</td>
-          <td>รศ.ดร.ศักรินทร์ ภูมิรัตน อธิการบดีมหาวิทยาเทคโนโลยีพระจอมเกล้าธนบุรี กล่าวต้อนรับผู้เข้าร่วมกิจกรรม พร้อมเปิดพิธี</td>
-        </tr>
-        <tr>
-          <td>08.00-09.30 น.</td>
-          <td>ตั้งขบวนพร้อมปั่นไป มจธ.บางขุนเทียน</td>
-        </tr>
-        <tr>
-          <td>09.30-10.30 น.</td>
-          <td>ร่วมรับประทานผลไม้ เครื่องดื่ม อาหารว่างและเตรียมปั่นจักรยานกลับ</td>
-        </tr>
-        <tr>
-          <td>10.30น.</td>
-          <td>ตั้งขบวนปั่นกลับ มจธ.บางมด</td>
-        </tr>
-        <tr>
-          <td>11.00น.</td>
-          <td>ตั้งขบวนปั่นกลับ มจธ.บางมด</td>
-        </tr>
-      </table>
-    </div>
-  </div> -->
         <div class="container">
-            <div class="page-header" style="margin-top:5em;">
+            <div class="page-header" style="">
                 <h1 id="timeline" class="text-center" style="margin-bottom:1.8em;">ตารางเวลา</h1>
             </div>
             <ul class="timeline">
