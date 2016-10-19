@@ -15,6 +15,7 @@
 </head>
 
 <body>
+  <img src="{{URL::asset('media/picture/black_ribbon_top_left.png')}}" class="black-ribbon stick-top stick-left"/>
     <header>
         <div id="nav_primary" class="nav_primary">
             <div class="col-sm-12" style="margin-left:-1em;">
