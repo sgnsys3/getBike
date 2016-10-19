@@ -48,16 +48,14 @@
 
     <section id="detail" style="background-color:white;" >
         <div class="container-fluid" data-aos="zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000">
-          <div style="margin-top:10%">
+          <div style="margin-top:10%; margin-bottom:10%">
                 <div class="row">
                     <div class="text-center" aos="fade-up" aos-offset="400" aos-duration="1000">
                         <p class="text-detail" style="font-size:2.2em">GET BIKE</p>
                     </div>
                 </div>
-                <div class="row" style="text-center">
-                    <center>
-                        <p class="text-detail" style="font-weight: 300;">เราคือโครงการจักรยานประเพณี มจธ. บางมด - บางขุนเทียน กิจกรรมปั่นจักรยานทางไกลข้ามวิทยาเขต<br>จากมจธ.บางมด ไปยังมจธ. บางขุนเทียน ระยะทางรวม 44 กิโลเมตร โดยนักศึกษา บุคลากร และบุคคลภายนอกสามารถเข้าร่วมได้ฟรี <br>ไม่มีค่าใช้จ่าย</p>
-                    </center>
+                <div class="row text-center" style="text-center">
+                        <p class="text-detail" style="font-weight: 300;">เราคือโครงการจักรยานประเพณี มจธ. บางมด - บางขุนเทียน กิจกรรมปั่นจักรยานทางไกลข้ามวิทยาเขต จากมจธ.บางมด ไปยังมจธ. บางขุนเทียน ระยะทางรวม 44 กิโลเมตร โดยนักศึกษา บุคลากร และบุคคลภายนอกสามารถเข้าร่วมได้ฟรี <br>ไม่มีค่าใช้จ่าย</p>
                 </div>
                 </div>
         </div>
@@ -65,11 +63,11 @@
 
     <section id="detail-more">
             <div class="col-sm-6" style="height:540px;background-image: url('{{ URL::asset('media/picture/blue-filter-bg.jpg') }}');">
-              <div class="container-fluid" style="margin-top:13rem">
+              <div class="container-fluid" style="margin-top:20%">
                 <div class="row">
-                    <h2 class="text-center detail-more-text" style="padding-bottom:10px; border-bottom:2px solid white; font-size:2.0em; font-weight:500;" data-aos="zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000">สิ่งที่ต้องเตรียมมา</h2>
+                    <h2 class="text-center detail-more-text" style="padding-bottom:15px; border-bottom:2px solid white; font-size:2.0em; font-weight:500;" data-aos="zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000">สิ่งที่ต้องเตรียมมา</h2>
                   </div>
-                    <div class="row" style="">
+                    <div class="row" style="margin-top:5%">
                         <div class="col-sm-12">
                           <div class="detail-more-text">
                             <div class="col-sm-4 text-center" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1200">
@@ -100,7 +98,7 @@
             </div>
             <div class="col-sm-6" style="background-image: url('{{ URL::asset('media/picture/blue-filter-bg.jpg') }}'); height:540px">
                 <div class="detail-more-text">
-                    <h2 class="text-center" style="padding-bottom:10px; border-bottom:2px solid white; margin-top:4em;" data-aos="zoom-in" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="1000">คุณสมบัติในการเข้าร่วม</h2>
+                    <h2 class="text-center" style="padding-bottom:10px; border-bottom:2px solid white; margin-top:15%;" data-aos="zoom-in" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="1000">คุณสมบัติในการเข้าร่วม</h2>
                     <p class="text-left" data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="1200" style="margin-bottom:1em;">* มีอายุ <span>15</span> ปีขึ้นไป</p>
                     <p class="text-left" data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="1350" style="margin-bottom:1em;">* ต้องสวมหมวกกันกระแทกสำหรับจักรยาน และรัดสายรัดให้เรียบร้อยในระหว่างการเข้าร่วมกิจกรรม</p>
                     <p class="text-left" data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="1500" style="margin-bottom:1em;">* มีทักษะในการปั่นจักรยานทางแคบได้ และปั่นในเส้นทางที่ผู้จัดกิจกรรมจัดให้เท่านั้น</p>
