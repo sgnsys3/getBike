@@ -270,6 +270,7 @@ a.nav-my-menu {
 }
 #register{
     height: 100vh;
+    max-height: 761px;
     color: white;
 }
 .register-text{
@@ -357,6 +358,7 @@ a.nav-my-menu {
   bottom: 0;
   overflow: hidden;
   height: 100vh;
+  max-height: 761px;
   width: 100%;
   position: relative;
 }
