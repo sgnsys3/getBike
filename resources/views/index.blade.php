@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/aos.css') }}">
-
-    <script src="{{ URL::asset('js/getbike.js') }}"></script>
 </head>
 
 <body>
@@ -380,6 +378,7 @@
             delay: 100,
         });
     </script>
+    <script src="{{ URL::asset('js/getbike.js') }}"></script>
     <script src="{{ URL::asset('js/footer.js') }}"></script>
 </body>
 
