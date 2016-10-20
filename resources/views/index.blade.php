@@ -267,7 +267,7 @@
 
     <div class="modal fade" id="forgetRegisterCodeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">
+            <div class="modal-content" style="margin-top: 7.3em">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title" id="myModalLabel" style="color:red">ลืมรหัสลงทะเบียน</h4>
@@ -277,22 +277,18 @@
                         <div id="first_name-control_check" class="form-group">
                             <label for="first_name_check">ชื่อจริง</label>
                             <input type="text" class="form-control" id="first_name_check" placeholder="First Name" tabindex="1">
-                            <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
                         </div>
                         <div id="last_name-control_check" class="form-group">
                             <label for="last_name_check">นามสกุล</label>
                             <input type="text" class="form-control" id="last_name_check" placeholder="Last Name" tabindex="2">
-                            <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
                         </div>
                         <div id="phone_number-control_check" class="form-group">
                             <label for="phone_number_check">เบอร์โทรศัพท์ โดยไม่มี -</label>
                             <input type="text" class="form-control" id="phone_number_check" placeholder="Phone Number without '-' Ex. 0998889988" tabindex="3">
-                            <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
                         </div>
                         <div id="email-control_check" class="form-group">
                             <label for="email_check">อีเมลล์</label>
                             <input type="text" class="form-control" id="email_check" placeholder="E-Mail" tabindex="4">
-                            <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -306,7 +302,7 @@
 
     <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">
+            <div class="modal-content" style="margin-top: 7.3em">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title" id="myModalLabel">ลงทะเบียน</h4>
@@ -316,22 +312,18 @@
                         <div id="first_name-control" class="form-group">
                             <label for="first_name">ชื่อจริง</label>
                             <input type="text" class="form-control" id="first_name" placeholder="First Name" tabindex="1">
-                            <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
                         </div>
                         <div id="last_name-control" class="form-group">
                             <label for="last_name">นามสกุล</label>
                             <input type="text" class="form-control" id="last_name" placeholder="Last Name" tabindex="2">
-                            <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
                         </div>
                         <div id="phone_number-control" class="form-group">
                             <label for="phone_number">เบอร์โทรศัพท์ โดยไม่มี -</label>
                             <input type="text" class="form-control" id="phone_number" placeholder="Phone Number without '-' Ex. 0998889988" tabindex="3">
-                            <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
                         </div>
                         <div id="email-control" class="form-group">
                             <label for="email">อีเมลล์</label>
                             <input type="text" class="form-control" id="email" placeholder="E-Mail" tabindex="4">
-                            <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -345,7 +337,7 @@
 
     <div class="modal fade" id="registerCodeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">
+            <div class="modal-content" style="margin-top: 11em">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title" id="myModalLabel">รหัสลงทะเบียน</h4>
