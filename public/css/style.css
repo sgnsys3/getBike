@@ -196,12 +196,14 @@ a.nav-my-menu {
   #map{
       height: 35em;
       padding-top: 6.3em;
+      margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1025px) {
   #map{
       height: 70% !important;
       padding-top: 3.9em;
+      margin-bottom: 0;
   }
 }
 #map-iframe{
@@ -348,16 +350,28 @@ a.nav-my-menu {
 }
 /*Start Infinite Slideshow*/
 .wrapper {
-  width: 100vw;
+  margin: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   overflow: hidden;
+  height: 100vh;
+  width: 98.7vw;
+  position: relative;
+}
+
+.myAbsolute {
+  z-index: 999;
 }
 
 .sliding-background {
+  position: absolute;
   z-index: -1;
-  background: url(http://getbike.local/media/image/blue-filter-bg.jpg) repeat-x;
-  height: 100vh;
-  width: 2000px;
-  animation: slide 20s linear infinite;
+  background: url("http://getbike.web.wip.camp/media/image/blue-filter-bg.jpg") repeat-x;
+  height: 761px;
+  width: 1998px;
+  animation: slide 60s linear infinite;
 }
 
 @keyframes slide{
@@ -365,7 +379,7 @@ a.nav-my-menu {
     transform: translate3d(0, 0, 0);
   }
   100%{
-    transform: translate3d(-666.66666px, 0, 0);
+    transform: translate3d(-600px, 0, 0);
   }
 }
 /*End infinite slide show*/
